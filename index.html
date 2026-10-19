@@ -76,6 +76,7 @@
  "url": "https://www.mediclife.cl/#blog",
  "inLanguage": "es-CL",
  "blogPost": [
+  {"@type": "BlogPosting", "headline": "Estudio de la función pulmonar: qué exámenes existen y cuándo se piden", "description": "Espirometría, test de marcha, pimometría y poligrafía: para qué sirve cada examen de función pulmonar y cuándo se indica.", "url": "https://www.mediclife.cl/#articulo-estudio-funcion-pulmonar-examenes", "datePublished": "2026-10-20", "author": {"@type": "Organization", "name": "MedicLife"}, "image": "https://www.mediclife.cl/assets/img/consulta-medica.webp"},
   {
    "@type": "BlogPosting",
    "headline": "Espirometría: qué es, para qué sirve y cómo prepararte",
@@ -348,6 +349,13 @@ body.menu-open{overflow:hidden}
 .post h3{font-size:1.15rem;line-height:1.3}
 .post p{color:var(--text-muted);font-size:.95rem}
 .post .tile-link{margin-top:auto;padding-top:6px}
+.blog-pager{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;margin-top:32px}
+.blog-pager[hidden]{display:none}
+.blog-pager button{min-width:44px;height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--border);background:#fff;color:var(--secondary);font:600 .95rem/1 var(--font);cursor:pointer;transition:background-color .3s var(--ease),border-color .3s var(--ease),color .3s var(--ease)}
+.blog-pager button:hover:not(:disabled){border-color:var(--primary);color:var(--primary)}
+.blog-pager button[aria-current="page"]{background:var(--primary);border-color:var(--primary);color:#fff}
+.blog-pager button:disabled{opacity:.45;cursor:default}
+.post[hidden]{display:none}
 .post.is-active{border-color:var(--primary);box-shadow:var(--shadow-lg)}
 dialog.reader{padding:0;border:0;margin:auto;width:min(880px,calc(100vw - 24px));max-width:none;max-height:calc(100dvh - 32px);border-radius:28px;background:#fff;color:var(--text);box-shadow:0 30px 80px -20px rgba(12,33,66,.55);overflow:hidden}
 dialog.reader[open]{display:flex;flex-direction:column;animation:readerIn .5s var(--ease-out) both}
@@ -870,6 +878,15 @@ a.ci:hover{border-color:var(--accent)}
         <p class="lead">Guías simples sobre exámenes y tratamientos, para que llegues a tu atención con todo claro.</p>
       </div>
       <div class="blog-grid" id="blog-grid">
+        <a class="post reveal" href="#articulo-estudio-funcion-pulmonar-examenes" data-article="articulo-estudio-funcion-pulmonar-examenes" aria-controls="articulo-estudio-funcion-pulmonar-examenes">
+          <div class="tile-img"><img class="" src="assets/img/consulta-medica.webp" alt="Médica revisando antecedentes de una paciente" width="340" height="200" loading="lazy"></div>
+          <div class="post-body">
+            <span class="cat">Exámenes</span>
+            <h3>Estudio de la función pulmonar: qué exámenes existen y cuándo se piden</h3>
+            <p>Espirometría, test de marcha, pimometría y poligrafía: para qué sirve cada uno y en qué casos se indican.</p>
+            <span class="tile-link">Leer artículo <svg class="ico"><use href="#i-arrow"/></svg></span>
+          </div>
+        </a>
         <a class="post reveal" href="#articulo-espirometria-que-es-y-como-prepararte" data-article="articulo-espirometria-que-es-y-como-prepararte" aria-controls="articulo-espirometria-que-es-y-como-prepararte">
           <div class="tile-img"><img class="img-lift" src="assets/img/espirometria.webp" alt="Paciente realizando una espirometría junto a una profesional de la salud" width="1125" height="340" loading="lazy"></div>
           <div class="post-body">
@@ -879,7 +896,7 @@ a.ci:hover{border-color:var(--accent)}
             <span class="tile-link">Leer artículo <svg class="ico"><use href="#i-arrow"/></svg></span>
           </div>
         </a>
-        <a class="post reveal reveal-d1" href="#articulo-kinesiologia-piso-pelvico-cuando-consultar" data-article="articulo-kinesiologia-piso-pelvico-cuando-consultar" aria-controls="articulo-kinesiologia-piso-pelvico-cuando-consultar">
+        <a class="post reveal" href="#articulo-kinesiologia-piso-pelvico-cuando-consultar" data-article="articulo-kinesiologia-piso-pelvico-cuando-consultar" aria-controls="articulo-kinesiologia-piso-pelvico-cuando-consultar">
           <div class="tile-img"><img class="img-lift" src="assets/img/unidad-mujer.webp" alt="Mujer al aire libre con los brazos abiertos" width="1125" height="340" loading="lazy"></div>
           <div class="post-body">
             <span class="cat">Unidad de la Mujer</span>
@@ -888,7 +905,7 @@ a.ci:hover{border-color:var(--accent)}
             <span class="tile-link">Leer artículo <svg class="ico"><use href="#i-arrow"/></svg></span>
           </div>
         </a>
-        <a class="post reveal reveal-d2" href="#articulo-holter-presion-arterial-que-es" data-article="articulo-holter-presion-arterial-que-es" aria-controls="articulo-holter-presion-arterial-que-es">
+        <a class="post reveal" href="#articulo-holter-presion-arterial-que-es" data-article="articulo-holter-presion-arterial-que-es" aria-controls="articulo-holter-presion-arterial-que-es">
           <div class="tile-img"><img class="" src="assets/img/enfermeria.webp" alt="Equipo de enfermería sonriendo" width="340" height="200" loading="lazy"></div>
           <div class="post-body">
             <span class="cat">Exámenes</span>
@@ -898,6 +915,59 @@ a.ci:hover{border-color:var(--accent)}
           </div>
         </a>
       </div>
+      <nav class="blog-pager" id="blog-pager" aria-label="Páginas del blog" hidden></nav>
+      <dialog class="reader" id="articulo-estudio-funcion-pulmonar-examenes" aria-labelledby="articulo-estudio-funcion-pulmonar-examenes-t">
+        <button class="reader-close" type="button" aria-label="Cerrar artículo"><svg class="ico"><use href="#i-plus"/></svg></button>
+        <div class="reader-scroll"><article class="reader-core">
+          <span class="cat">Exámenes</span>
+          <h3 id="articulo-estudio-funcion-pulmonar-examenes-t" class="reader-title">Estudio de la función pulmonar: qué exámenes existen y cuándo se piden</h3>
+          <p class="reader-dek">Espirometría, test de marcha, pimometría y poligrafía: para qué sirve cada uno, en qué casos se indican y cuándo conviene consultar.</p>
+          <p class="reader-meta">MedicLife · <time datetime="2026-10-20">20 de octubre de 2026</time> · Lectura de 6 min</p>
+          <div class="reader-cover"><img class="" src="assets/img/consulta-medica.webp" alt="Médica revisando antecedentes de una paciente" width="340" height="200" loading="lazy"></div>
+          <nav class="reader-toc" aria-label="Contenido del artículo"><strong>En este artículo</strong><ol><li><a href="#pulmon-por-que">Por qué estudiar la función pulmonar</a></li><li><a href="#pulmon-espirometria">Espirometría basal y post broncodilatador</a></li><li><a href="#pulmon-ejercicio">Espirometría con ejercicio</a></li><li><a href="#pulmon-marcha">Test de marcha</a></li><li><a href="#pulmon-pim">Pimometría (PIM-PEM)</a></li><li><a href="#pulmon-poligrafia">Poligrafía respiratoria</a></li><li><a href="#pulmon-cuando">Cuándo consultar</a></li><li><a href="#pulmon-mediclife">Función pulmonar en MedicLife</a></li></ol></nav>
+          <div class="prose">
+<h4 id="pulmon-por-que">Por qué estudiar la función pulmonar</h4>
+<p>Toser seguido, ahogarse al subir una escalera o roncar con pausas al dormir son molestias que mucha gente normaliza. Sin embargo, pueden ser señales de que los pulmones o la respiración no están funcionando como deberían. Los exámenes de función pulmonar permiten <strong>medir</strong> lo que pasa, apoyar el diagnóstico y controlar la evolución de un tratamiento.</p>
+<p>No existe un único examen: cada prueba responde una pregunta distinta. Estos son los principales.</p>
+
+<h4 id="pulmon-espirometria">Espirometría basal y post broncodilatador</h4>
+<p>Mide <strong>cuánto aire</strong> pueden contener tus pulmones y <strong>con qué rapidez</strong> lo expulsas. Se sopla con fuerza por una boquilla conectada a un equipo. Luego, en la versión post broncodilatador, se repite tras inhalar un medicamento que abre los bronquios, para ver si la obstrucción mejora.</p>
+<p>Es la prueba base para estudiar <strong>asma</strong> y <strong>EPOC</strong>, y también se usa en evaluaciones prequirúrgicas y deportivas. Si te la indicaron, revisa <a href="#articulo-espirometria-que-es-y-como-prepararte" data-article="articulo-espirometria-que-es-y-como-prepararte">cómo prepararte para una espirometría</a>.</p>
+
+<h4 id="pulmon-ejercicio">Espirometría con ejercicio</h4>
+<p>Algunas personas solo tienen síntomas al hacer actividad física: tos, pecho apretado o falta de aire durante o después del ejercicio. En esta prueba se mide la función pulmonar <strong>antes y después de un esfuerzo físico</strong>, lo que ayuda a detectar si los bronquios se cierran con el ejercicio.</p>
+
+<h4 id="pulmon-marcha">Test de marcha</h4>
+<p>Evalúa tu <strong>capacidad funcional</strong>: caminas a tu ritmo durante un tiempo determinado, normalmente seis minutos, mientras se registran la distancia recorrida, la oxigenación de la sangre y la frecuencia cardíaca. Es útil para conocer cómo responde tu cuerpo al esfuerzo en enfermedades respiratorias o cardíacas crónicas, y para evaluar avances en rehabilitación.</p>
+
+<h4 id="pulmon-pim">Pimometría (PIM-PEM)</h4>
+<p>Mide la <strong>fuerza de los músculos respiratorios</strong> a través de la presión máxima que logras al inspirar (PIM) y al espirar (PEM). Se usa cuando se sospecha debilidad de estos músculos, por ejemplo en algunas enfermedades neuromusculares, y para planificar o controlar el entrenamiento respiratorio.</p>
+
+<h4 id="pulmon-poligrafia">Poligrafía respiratoria</h4>
+<p>Es un estudio de la respiración <strong>durante el sueño</strong>. Un equipo portátil registra el flujo de aire, los movimientos respiratorios y la oxigenación mientras duermes. Ayuda a estudiar el <strong>síndrome de apnea-hipopnea obstructiva del sueño (SAHOS)</strong>, que puede manifestarse con ronquidos fuertes, pausas en la respiración, despertares frecuentes y cansancio durante el día.</p>
+
+<h4 id="pulmon-cuando">Cuándo consultar</h4>
+<p>Conviene conversar con un profesional y evaluar si necesitas alguno de estos exámenes si tienes:</p>
+<ul>
+<li><strong>Tos</strong> que dura varias semanas o se repite con frecuencia.</li>
+<li><strong>Dificultad para respirar</strong> o pecho apretado, en reposo o al hacer esfuerzo.</li>
+<li>Silbidos en el pecho o crisis de ahogo.</li>
+<li>Ronquidos fuertes, <strong>pausas al respirar mientras duermes</strong> o mucho sueño durante el día.</li>
+<li>Antecedentes de <strong>tabaquismo</strong>, sobre todo después de los 40 años.</li>
+<li>Una <strong>cirugía</strong> programada o el inicio de un entrenamiento físico exigente.</li>
+</ul>
+<p>El profesional definirá qué examen corresponde según tus síntomas y antecedentes.</p>
+
+<h4 id="pulmon-mediclife">Función pulmonar en MedicLife</h4>
+<p>El Laboratorio de Función Pulmonar de MedicLife realiza espirometría basal y post broncodilatador, espirometría con ejercicio, test de marcha y pimometría, además de poligrafía. Según la agenda en línea, la espirometría está disponible en <strong>Antofagasta, Tocopilla y Coquimbo</strong>. Para conocer la disponibilidad de los demás exámenes en tu ciudad, llámanos al <a href="tel:+56229029517">(2) 2902 9517</a>.</p>
+          </div>
+          <p class="reader-note"><strong>Importante:</strong> este artículo entrega información general y no reemplaza la evaluación de un profesional de la salud. Ante cualquier síntoma o duda, consulta con tu médico.</p>
+          <div class="reader-actions">
+            <a class="btn btn-primary js-booking" href="#" target="_blank" rel="noopener">Agenda tu hora<span class="btn-ico"><svg class="ico"><use href="#i-arrow"/></svg></span></a>
+            <button class="btn btn-ghost reader-back" type="button">Cerrar</button>
+          </div>
+        </article></div>
+      </dialog>
       <dialog class="reader" id="articulo-espirometria-que-es-y-como-prepararte" aria-labelledby="articulo-espirometria-que-es-y-como-prepararte-t">
         <button class="reader-close" type="button" aria-label="Cerrar artículo"><svg class="ico"><use href="#i-plus"/></svg></button>
         <div class="reader-scroll"><article class="reader-core">
@@ -1395,7 +1465,9 @@ a.ci:hover{border-color:var(--accent)}
   function openArticle(id, trigger){
     var dlg = doc.getElementById(id);
     if (!dlg || dlg.open) return;
-    lastTrigger = trigger || null;
+    var keep = null, switching = false;
+    readers.forEach(function(d){ if (d.open) { switching = true; keep = lastTrigger; lastTrigger = null; closeArticle(d); } });
+    lastTrigger = switching ? keep : (trigger || null);
     if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
     body.classList.add('modal-open');
     dlg.querySelector('.reader-scroll').scrollTop = 0;
@@ -1424,6 +1496,32 @@ a.ci:hover{border-color:var(--accent)}
     a.addEventListener('click', function(e){ e.preventDefault(); openArticle(a.getAttribute('data-article'), a); });
   });
   if (location.hash && (location.hash.indexOf('#articulo-') === 0 || location.hash === '#politica-de-privacidad')) { openArticle(location.hash.slice(1), null); }
+
+  // Blog: paginación (3 por página, del más nuevo al más antiguo)
+  (function(){
+    var PER_PAGE = 3;
+    var grid = doc.getElementById('blog-grid'), pager = doc.getElementById('blog-pager');
+    if (!grid || !pager) return;
+    var cards = Array.prototype.slice.call(grid.querySelectorAll('.post'));
+    var pages = Math.ceil(cards.length / PER_PAGE), current = 1;
+    if (pages < 2) return;
+    pager.hidden = false;
+    function render(page, scroll){
+      current = page;
+      cards.forEach(function(c, i){ var show = Math.floor(i / PER_PAGE) + 1 === page; c.hidden = !show; if (show) c.classList.add('in'); });
+      var html = '<button type="button" data-p="prev" aria-label="Página anterior"' + (page === 1 ? ' disabled' : '') + '>Anterior</button>';
+      for (var p = 1; p <= pages; p++) html += '<button type="button" data-p="' + p + '"' + (p === page ? ' aria-current="page"' : '') + ' aria-label="Página ' + p + '">' + p + '</button>';
+      html += '<button type="button" data-p="next" aria-label="Página siguiente"' + (page === pages ? ' disabled' : '') + '>Siguiente</button>';
+      pager.innerHTML = html;
+      if (scroll) doc.getElementById('blog').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    pager.addEventListener('click', function(e){
+      var b = e.target.closest('button'); if (!b || b.disabled) return;
+      var v = b.getAttribute('data-p');
+      render(v === 'prev' ? current - 1 : v === 'next' ? current + 1 : +v, true);
+    });
+    render(1, false);
+  })();
 
   // Menú: resaltar la sección visible (nada en el inicio)
   var navLinks = doc.querySelectorAll('.nav-links a[href^="#"]');
