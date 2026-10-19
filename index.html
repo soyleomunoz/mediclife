@@ -341,10 +341,13 @@ body.menu-open{overflow:hidden}
 .post p{color:var(--text-muted);font-size:.95rem}
 .post .tile-link{margin-top:auto;padding-top:6px}
 .post.is-active{border-color:var(--primary);box-shadow:var(--shadow-lg)}
-.reader{margin-top:28px;scroll-margin-top:96px}
-.reader-shell{background:#fff;border:1px solid var(--border);border-radius:28px;padding:8px;box-shadow:var(--shadow-lg)}
-.reader-core{position:relative;border-radius:22px;background:var(--bg);padding:32px 22px 28px;max-width:none}
-
+dialog.reader{padding:0;border:0;margin:auto;width:min(880px,calc(100vw - 24px));max-width:none;max-height:calc(100dvh - 32px);border-radius:28px;background:#fff;color:var(--text);box-shadow:0 30px 80px -20px rgba(12,33,66,.55);overflow:hidden}
+dialog.reader[open]{display:flex;flex-direction:column;animation:readerIn .5s var(--ease-out) both}
+dialog.reader:focus,dialog.reader:focus-visible{outline:none}
+.reader-scroll{scrollbar-width:thin;scrollbar-color:#B9CBE6 transparent}
+dialog.reader::backdrop{background:rgba(12,33,66,.6);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.reader-scroll{overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;flex:1 1 auto;min-height:0}
+.reader-core{display:block;padding:30px 22px 28px}
 .reader .cat{display:inline-block;font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--primary);background:var(--accent-soft);padding:6px 12px;border-radius:999px}
 .reader-title{font-size:clamp(1.7rem,3.6vw,2.4rem);line-height:1.15;letter-spacing:-.03em;font-weight:800;margin:14px 0 10px;padding-right:44px}
 .reader-dek{font-size:1.1rem;color:var(--text-muted)}
@@ -365,11 +368,12 @@ body.menu-open{overflow:hidden}
 .reader-note{background:var(--bg-alt);border:1px solid var(--border);border-radius:16px;padding:16px 18px;font-size:.92rem;color:var(--text-muted);margin-top:28px}
 .reader-note strong{color:var(--secondary)}
 .reader-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
-.reader-close{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;border:1px solid var(--border);background:#fff;color:var(--secondary);display:grid;place-items:center;cursor:pointer;transform:rotate(45deg);transition:background-color .3s var(--ease)}
+.reader-close{position:absolute;top:14px;right:14px;z-index:2;box-shadow:var(--shadow-sm);width:44px;height:44px;border-radius:50%;border:1px solid var(--border);background:#fff;color:var(--secondary);display:grid;place-items:center;cursor:pointer;transform:rotate(45deg);transition:background-color .3s var(--ease)}
 .reader-close:hover{background:var(--accent-soft)}
-.reader.opening .reader-shell{animation:readerIn .6s var(--ease-out) both}
-@keyframes readerIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-@media (min-width:768px){.reader-core{padding:48px max(40px,calc((100% - 760px) / 2)) 40px}}
+@keyframes readerIn{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:none}}
+body.modal-open{overflow:hidden}
+.prose h4{scroll-margin-top:24px}
+@media (min-width:768px){.reader-core{padding:48px 56px 44px}}
 
 /* FAQ */
 .faq-wrap{display:grid;grid-template-columns:1fr;gap:32px}
@@ -885,9 +889,9 @@ a.ci:hover{border-color:var(--accent)}
           </div>
         </a>
       </div>
-      <article class="reader" id="articulo-espirometria-que-es-y-como-prepararte" hidden aria-labelledby="articulo-espirometria-que-es-y-como-prepararte-t">
-        <div class="reader-shell"><div class="reader-core">
-          <button class="reader-close" type="button" aria-label="Cerrar artículo"><svg class="ico"><use href="#i-plus"/></svg></button>
+      <dialog class="reader" id="articulo-espirometria-que-es-y-como-prepararte" aria-labelledby="articulo-espirometria-que-es-y-como-prepararte-t">
+        <button class="reader-close" type="button" aria-label="Cerrar artículo"><svg class="ico"><use href="#i-plus"/></svg></button>
+        <div class="reader-scroll"><article class="reader-core">
           <span class="cat">Exámenes</span>
           <h3 id="articulo-espirometria-que-es-y-como-prepararte-t" class="reader-title">Espirometría: qué es, para qué sirve y cómo prepararte</h3>
           <p class="reader-dek">Una guía simple sobre el examen que evalúa cómo funcionan tus pulmones: qué mide, cuándo se pide y qué cuidados tener antes de hacértelo.</p>
@@ -940,13 +944,13 @@ a.ci:hover{border-color:var(--accent)}
           <p class="reader-note"><strong>Importante:</strong> este artículo entrega información general y no reemplaza la evaluación de un profesional de la salud. Ante cualquier síntoma o duda, consulta con tu médico.</p>
           <div class="reader-actions">
             <a class="btn btn-primary js-booking" href="#" target="_blank" rel="noopener">Agenda tu hora<span class="btn-ico"><svg class="ico"><use href="#i-arrow"/></svg></span></a>
-            <button class="btn btn-ghost reader-back" type="button">Volver a los artículos</button>
+            <button class="btn btn-ghost reader-back" type="button">Cerrar</button>
           </div>
-        </div></div>
-      </article>
-      <article class="reader" id="articulo-kinesiologia-piso-pelvico-cuando-consultar" hidden aria-labelledby="articulo-kinesiologia-piso-pelvico-cuando-consultar-t">
-        <div class="reader-shell"><div class="reader-core">
-          <button class="reader-close" type="button" aria-label="Cerrar artículo"><svg class="ico"><use href="#i-plus"/></svg></button>
+        </article></div>
+      </dialog>
+      <dialog class="reader" id="articulo-kinesiologia-piso-pelvico-cuando-consultar" aria-labelledby="articulo-kinesiologia-piso-pelvico-cuando-consultar-t">
+        <button class="reader-close" type="button" aria-label="Cerrar artículo"><svg class="ico"><use href="#i-plus"/></svg></button>
+        <div class="reader-scroll"><article class="reader-core">
           <span class="cat">Unidad de la Mujer</span>
           <h3 id="articulo-kinesiologia-piso-pelvico-cuando-consultar-t" class="reader-title">Kinesiología de piso pélvico: señales para consultar</h3>
           <p class="reader-dek">Escapes de orina, posparto o menopausia: el piso pélvico se puede evaluar y entrenar. Te contamos cuándo pedir una evaluación.</p>
@@ -992,13 +996,13 @@ a.ci:hover{border-color:var(--accent)}
           <p class="reader-note"><strong>Importante:</strong> este artículo entrega información general y no reemplaza la evaluación de un profesional de la salud. Ante cualquier síntoma o duda, consulta con tu médico.</p>
           <div class="reader-actions">
             <a class="btn btn-primary js-booking" href="#" target="_blank" rel="noopener">Agenda tu hora<span class="btn-ico"><svg class="ico"><use href="#i-arrow"/></svg></span></a>
-            <button class="btn btn-ghost reader-back" type="button">Volver a los artículos</button>
+            <button class="btn btn-ghost reader-back" type="button">Cerrar</button>
           </div>
-        </div></div>
-      </article>
-      <article class="reader" id="articulo-holter-presion-arterial-que-es" hidden aria-labelledby="articulo-holter-presion-arterial-que-es-t">
-        <div class="reader-shell"><div class="reader-core">
-          <button class="reader-close" type="button" aria-label="Cerrar artículo"><svg class="ico"><use href="#i-plus"/></svg></button>
+        </article></div>
+      </dialog>
+      <dialog class="reader" id="articulo-holter-presion-arterial-que-es" aria-labelledby="articulo-holter-presion-arterial-que-es-t">
+        <button class="reader-close" type="button" aria-label="Cerrar artículo"><svg class="ico"><use href="#i-plus"/></svg></button>
+        <div class="reader-scroll"><article class="reader-core">
           <span class="cat">Exámenes</span>
           <h3 id="articulo-holter-presion-arterial-que-es-t" class="reader-title">Holter de presión arterial: cómo funciona y qué esperar</h3>
           <p class="reader-dek">Por qué tu médico puede pedirte un monitoreo de presión de 24 horas, cómo es usar el equipo y qué hacer para obtener un buen resultado.</p>
@@ -1044,10 +1048,10 @@ a.ci:hover{border-color:var(--accent)}
           <p class="reader-note"><strong>Importante:</strong> este artículo entrega información general y no reemplaza la evaluación de un profesional de la salud. Ante cualquier síntoma o duda, consulta con tu médico.</p>
           <div class="reader-actions">
             <a class="btn btn-primary js-booking" href="#" target="_blank" rel="noopener">Agenda tu hora<span class="btn-ico"><svg class="ico"><use href="#i-arrow"/></svg></span></a>
-            <button class="btn btn-ghost reader-back" type="button">Volver a los artículos</button>
+            <button class="btn btn-ghost reader-back" type="button">Cerrar</button>
           </div>
-        </div></div>
-      </article>
+        </article></div>
+      </dialog>
     </div>
   </section>
 
@@ -1261,46 +1265,61 @@ a.ci:hover{border-color:var(--accent)}
     });
   });
 
-  // Blog: artículos dentro de la landing
-  var readers = doc.querySelectorAll('.reader');
-  var postCards = doc.querySelectorAll('.post[data-article]');
-  function openArticle(id, focus){
-    var target = doc.getElementById(id);
-    if (!target) return;
-    readers.forEach(function(r){ r.hidden = r !== target; r.classList.remove('opening'); });
-    postCards.forEach(function(c){ var on = c.getAttribute('data-article') === id; c.classList.toggle('is-active', on); c.setAttribute('aria-expanded', String(on)); });
-    target.hidden = false;
-    void target.offsetWidth; target.classList.add('opening');
-    target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
-    if (focus) { var t = target.querySelector('.reader-title'); t.setAttribute('tabindex','-1'); t.focus({ preventScroll: true }); }
+  // Blog: artículos en modal
+  var readers = doc.querySelectorAll('dialog.reader');
+  var lastTrigger = null;
+  function openArticle(id, trigger){
+    var dlg = doc.getElementById(id);
+    if (!dlg || dlg.open) return;
+    lastTrigger = trigger || null;
+    if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+    body.classList.add('modal-open');
+    dlg.querySelector('.reader-scroll').scrollTop = 0;
+    dlg.querySelector('.reader-close').focus({ preventScroll: true });
     if (history.replaceState) history.replaceState(null, '', '#' + id);
   }
-  function closeArticle(){
-    var open = Array.prototype.find.call(readers, function(r){ return !r.hidden; });
-    readers.forEach(function(r){ r.hidden = true; });
-    postCards.forEach(function(c){ c.classList.remove('is-active'); c.setAttribute('aria-expanded','false'); });
-    var grid = doc.getElementById('blog-grid');
-    grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    if (open) { var card = doc.querySelector('.post[data-article="' + open.id + '"]'); if (card) card.focus({ preventScroll: true }); }
-    if (history.replaceState) history.replaceState(null, '', '#blog');
+  function closeArticle(dlg){
+    if (dlg.open && typeof dlg.close === 'function') dlg.close(); else dlg.removeAttribute('open');
   }
-  doc.querySelectorAll('a[data-article]').forEach(function(a){
-    a.addEventListener('click', function(e){ e.preventDefault(); openArticle(a.getAttribute('data-article'), true); });
+  readers.forEach(function(dlg){
+    dlg.addEventListener('close', function(){
+      body.classList.remove('modal-open');
+      if (history.replaceState && location.hash === '#' + dlg.id) history.replaceState(null, '', location.pathname + location.search);
+      if (lastTrigger) { lastTrigger.focus({ preventScroll: true }); lastTrigger = null; }
+    });
+    dlg.addEventListener('click', function(e){ if (e.target === dlg) closeArticle(dlg); });
+    dlg.querySelectorAll('.reader-close, .reader-back').forEach(function(btn){ btn.addEventListener('click', function(){ closeArticle(dlg); }); });
+    dlg.querySelectorAll('.reader-toc a').forEach(function(l){
+      l.addEventListener('click', function(e){ e.preventDefault(); var t = dlg.querySelector(l.getAttribute('href')); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+    });
   });
-  doc.querySelectorAll('.reader-close, .reader-back').forEach(function(b){ b.addEventListener('click', closeArticle); });
-  if (location.hash && location.hash.indexOf('#articulo-') === 0) { openArticle(location.hash.slice(1), false); }
+  doc.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') readers.forEach(function(dlg){ if (dlg.open) { e.preventDefault(); closeArticle(dlg); } });
+  });
+  doc.querySelectorAll('a[data-article]').forEach(function(a){
+    a.addEventListener('click', function(e){ e.preventDefault(); openArticle(a.getAttribute('data-article'), a); });
+  });
+  if (location.hash && location.hash.indexOf('#articulo-') === 0) { openArticle(location.hash.slice(1), null); }
 
-  // Menú: resaltar la sección visible
+  // Menú: resaltar la sección visible (nada en el inicio)
   var navLinks = doc.querySelectorAll('.nav-links a[href^="#"]');
+  function clearActive(){ navLinks.forEach(function(l){ l.classList.remove('active'); }); }
   if ('IntersectionObserver' in window) {
     var map = {};
     navLinks.forEach(function(a){ var sec = doc.querySelector(a.getAttribute('href')); if (sec) map[sec.id] = a; });
+    var watch = Object.keys(map).map(function(id){ return doc.getElementById(id); });
+    var hero = doc.getElementById('inicio'), trust = doc.querySelector('.trust');
     var spy = new IntersectionObserver(function(entries){
       entries.forEach(function(en){
-        if (en.isIntersecting && map[en.target.id]) { navLinks.forEach(function(l){ l.classList.remove('active'); }); map[en.target.id].classList.add('active'); }
+        if (!en.isIntersecting) return;
+        clearActive();
+        var link = map[en.target.id];
+        if (link) link.classList.add('active');
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    Object.keys(map).forEach(function(id){ spy.observe(doc.getElementById(id)); });
+    watch.concat([hero, trust]).forEach(function(el){ if (el) spy.observe(el); });
+    // Si se vuelve al inicio (logo o botón subir), limpiar de inmediato
+    new IntersectionObserver(function(e){ if (e[0].isIntersecting) clearActive(); }).observe(top40);
   }
 
   // Formulario: validación y envío por correo
