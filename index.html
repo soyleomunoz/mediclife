@@ -66,6 +66,54 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Blog",
+ "name": "Blog de salud MedicLife",
+ "url": "https://www.mediclife.cl/#blog",
+ "inLanguage": "es-CL",
+ "blogPost": [
+  {
+   "@type": "BlogPosting",
+   "headline": "Espirometría: qué es, para qué sirve y cómo prepararte",
+   "description": "Qué mide la espirometría, cuándo se pide, en qué consiste la prueba post broncodilatador y cómo prepararte para el examen. Guía de MedicLife.",
+   "url": "https://www.mediclife.cl/#articulo-espirometria-que-es-y-como-prepararte",
+   "datePublished": "2026-10-19",
+   "author": {
+    "@type": "Organization",
+    "name": "MedicLife"
+   },
+   "image": "https://www.mediclife.cl/assets/img/espirometria.webp"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Kinesiología de piso pélvico: señales para consultar",
+   "description": "Qué es el piso pélvico, qué señales indican que conviene una evaluación kinesiológica y cómo es el tratamiento. Unidad de la Mujer de MedicLife.",
+   "url": "https://www.mediclife.cl/#articulo-kinesiologia-piso-pelvico-cuando-consultar",
+   "datePublished": "2026-10-19",
+   "author": {
+    "@type": "Organization",
+    "name": "MedicLife"
+   },
+   "image": "https://www.mediclife.cl/assets/img/unidad-mujer.webp"
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Holter de presión arterial: cómo funciona y qué esperar",
+   "description": "Qué es el Holter de presión arterial o monitoreo de 24 horas, por qué se pide, cómo usar el equipo y recomendaciones prácticas. Guía de MedicLife.",
+   "url": "https://www.mediclife.cl/#articulo-holter-presion-arterial-que-es",
+   "datePublished": "2026-10-19",
+   "author": {
+    "@type": "Organization",
+    "name": "MedicLife"
+   },
+   "image": "https://www.mediclife.cl/assets/img/enfermeria.webp"
+  }
+ ]
+}
+</script>
+
 <style>
 :root{
   --primary:#285CA8;
@@ -133,8 +181,9 @@ svg.ico{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-wi
 .site-header.scrolled .nav-shell{box-shadow:var(--shadow-lg);background:rgba(255,255,255,.94)}
 .brand{display:flex;align-items:center;flex:none}
 .brand img{height:40px;width:auto}
+.nav-links a.active{color:var(--primary);background:var(--accent-soft)}
 .nav-links{display:none;list-style:none;margin:0;padding:0;gap:4px}
-.nav-links a{display:block;text-decoration:none;color:var(--text);font-weight:600;font-size:.94rem;padding:9px 13px;border-radius:999px;transition:background-color .3s var(--ease),color .3s var(--ease)}
+.nav-links a{display:block;text-decoration:none;color:var(--text);font-weight:600;font-size:.92rem;padding:9px 11px;white-space:nowrap;border-radius:999px;transition:background-color .3s var(--ease),color .3s var(--ease)}
 .nav-links a:hover{background:var(--accent-soft);color:var(--primary)}
 .nav-cta{display:none}
 .nav-cta.btn{min-height:46px;padding:6px 6px 6px 18px;font-size:.94rem}
@@ -152,7 +201,7 @@ svg.ico{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-wi
 .mobile-menu ul{list-style:none;margin:0 0 28px;padding:0}
 .mobile-menu li{opacity:0;transform:translateY(28px);transition:opacity .5s var(--ease-out),transform .6s var(--ease-out)}
 .menu-open .mobile-menu li{opacity:1;transform:none}
-.menu-open .mobile-menu li:nth-child(2){transition-delay:.04s}.menu-open .mobile-menu li:nth-child(3){transition-delay:.08s}.menu-open .mobile-menu li:nth-child(4){transition-delay:.12s}.menu-open .mobile-menu li:nth-child(5){transition-delay:.16s}.menu-open .mobile-menu li:nth-child(6){transition-delay:.2s}.menu-open .mobile-menu li:nth-child(7){transition-delay:.24s}
+.menu-open .mobile-menu li:nth-child(2){transition-delay:.04s}.menu-open .mobile-menu li:nth-child(3){transition-delay:.08s}.menu-open .mobile-menu li:nth-child(4){transition-delay:.12s}.menu-open .mobile-menu li:nth-child(5){transition-delay:.16s}.menu-open .mobile-menu li:nth-child(6){transition-delay:.2s}.menu-open .mobile-menu li:nth-child(7){transition-delay:.24s}.menu-open .mobile-menu li:nth-child(8){transition-delay:.28s}.menu-open .mobile-menu li:nth-child(9){transition-delay:.32s}
 .mobile-menu a.m-link{display:block;font-size:1.7rem;font-weight:700;color:var(--secondary);text-decoration:none;padding:8px 0;letter-spacing:-.02em}
 body.menu-open{overflow:hidden}
 
@@ -291,7 +340,36 @@ body.menu-open{overflow:hidden}
 .post h3{font-size:1.15rem;line-height:1.3}
 .post p{color:var(--text-muted);font-size:.95rem}
 .post .tile-link{margin-top:auto;padding-top:6px}
-.blog-more{margin-top:28px}
+.post.is-active{border-color:var(--primary);box-shadow:var(--shadow-lg)}
+.reader{margin-top:28px;scroll-margin-top:96px}
+.reader-shell{background:#fff;border:1px solid var(--border);border-radius:28px;padding:8px;box-shadow:var(--shadow-lg)}
+.reader-core{position:relative;border-radius:22px;background:var(--bg);padding:32px 22px 28px;max-width:none}
+
+.reader .cat{display:inline-block;font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--primary);background:var(--accent-soft);padding:6px 12px;border-radius:999px}
+.reader-title{font-size:clamp(1.7rem,3.6vw,2.4rem);line-height:1.15;letter-spacing:-.03em;font-weight:800;margin:14px 0 10px;padding-right:44px}
+.reader-dek{font-size:1.1rem;color:var(--text-muted)}
+.reader-meta{font-size:.88rem;color:var(--text-muted);margin-top:12px}
+.reader-cover{margin-top:24px;margin-bottom:28px}
+.reader-cover img{border-radius:var(--radius-img);width:100%;aspect-ratio:21/8;object-fit:cover}
+.reader-toc{background:var(--accent-soft);border-radius:18px;padding:16px 22px;margin-bottom:8px}
+.reader-toc strong{display:block;color:var(--secondary);margin-bottom:4px}
+.reader-toc ol{margin:0;padding-left:20px}
+.reader-toc a{text-decoration:none}
+.reader-toc a:hover{text-decoration:underline}
+.prose{font-size:1.04rem;line-height:1.75}
+.prose h4{font-size:1.4rem;line-height:1.25;letter-spacing:-.02em;color:var(--secondary);margin:36px 0 10px;scroll-margin-top:96px}
+.prose p{margin:0 0 16px}
+.prose ul,.prose ol{margin:0 0 18px;padding-left:22px}
+.prose li{margin-bottom:8px}
+.prose strong{color:var(--secondary)}
+.reader-note{background:var(--bg-alt);border:1px solid var(--border);border-radius:16px;padding:16px 18px;font-size:.92rem;color:var(--text-muted);margin-top:28px}
+.reader-note strong{color:var(--secondary)}
+.reader-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.reader-close{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;border:1px solid var(--border);background:#fff;color:var(--secondary);display:grid;place-items:center;cursor:pointer;transform:rotate(45deg);transition:background-color .3s var(--ease)}
+.reader-close:hover{background:var(--accent-soft)}
+.reader.opening .reader-shell{animation:readerIn .6s var(--ease-out) both}
+@keyframes readerIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media (min-width:768px){.reader-core{padding:48px max(40px,calc((100% - 760px) / 2)) 40px}}
 
 /* FAQ */
 .faq-wrap{display:grid;grid-template-columns:1fr;gap:32px}
@@ -404,10 +482,12 @@ a.ci:hover{border-color:var(--accent)}
   .empresas{grid-template-columns:1.2fr 1fr;padding:56px}
   .hero-visual{min-height:440px}
 }
-@media (min-width:1024px){
+@media (min-width:1200px){
   .nav-links{display:flex}
   .nav-cta{display:inline-flex}
   .menu-toggle,.mobile-menu{display:none}
+}
+@media (min-width:1024px){
   .hero{padding:150px 0 96px;min-height:min(100dvh,860px);display:flex;align-items:center}
   .hero-grid{grid-template-columns:1.05fr .95fr;gap:56px}
   .hero-visual{justify-self:end}
@@ -477,10 +557,12 @@ a.ci:hover{border-color:var(--accent)}
     </a>
     <ul class="nav-links">
       <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#mujer">Unidad de la Mujer</a></li>
       <li><a href="#examenes">Exámenes</a></li>
+      <li><a href="#mujer">Unidad de la Mujer</a></li>
       <li><a href="#sedes">Sedes</a></li>
-      <li><a href="blog/">Blog</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#preguntas">Preguntas</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
     <a class="btn btn-primary nav-cta js-booking" href="#" target="_blank" rel="noopener">Agenda tu hora<span class="btn-ico"><svg class="ico"><use href="#i-arrow"/></svg></span></a>
@@ -491,10 +573,12 @@ a.ci:hover{border-color:var(--accent)}
 <div class="mobile-menu" id="menu-movil" aria-hidden="true">
   <ul>
     <li><a class="m-link" href="#servicios">Servicios</a></li>
-    <li><a class="m-link" href="#mujer">Unidad de la Mujer</a></li>
     <li><a class="m-link" href="#examenes">Exámenes</a></li>
+    <li><a class="m-link" href="#mujer">Unidad de la Mujer</a></li>
     <li><a class="m-link" href="#sedes">Sedes</a></li>
-    <li><a class="m-link" href="blog/">Blog</a></li>
+    <li><a class="m-link" href="#nosotros">Nosotros</a></li>
+    <li><a class="m-link" href="#blog">Blog</a></li>
+    <li><a class="m-link" href="#preguntas">Preguntas</a></li>
     <li><a class="m-link" href="#contacto">Contacto</a></li>
     <li><a class="btn btn-primary js-booking" href="#" target="_blank" rel="noopener" style="margin-top:18px">Agenda tu hora<span class="btn-ico"><svg class="ico"><use href="#i-arrow"/></svg></span></a></li>
   </ul>
@@ -601,6 +685,34 @@ a.ci:hover{border-color:var(--accent)}
     </div>
   </section>
 
+  <!-- EXÁMENES -->
+  <section class="section section-alt" id="examenes" aria-labelledby="exam-title">
+    <div class="container exam-grid">
+      <div class="reveal">
+        <span class="eyebrow">Laboratorio de función pulmonar</span>
+        <h2 id="exam-title">Exámenes para un diagnóstico preciso</h2>
+        <p class="lead">La espirometría mide cuánto aire tienen tus pulmones y la velocidad con que lo movilizas. Es clave para evaluar tu función pulmonar.</p>
+        <h3 style="margin-top:28px;font-size:1.05rem">¿Qué permite detectar o evaluar?</h3>
+        <div class="detect">
+          <span class="chip">Asma bronquial</span><span class="chip">EPOC en fumadores</span><span class="chip">Causa de dificultad respiratoria</span><span class="chip">Evaluación prequirúrgica</span><span class="chip">Alergias</span><span class="chip">Efecto de un medicamento</span><span class="chip">Avance de un tratamiento</span><span class="chip">Daño por contaminantes</span><span class="chip">Evaluación deportiva</span>
+        </div>
+        <div class="exam-photo"><div class="bezel"><img src="assets/img/espirometria.webp" alt="Paciente realizando una espirometría junto a una profesional" width="1125" height="340" loading="lazy"></div></div>
+        <p style="margin-top:22px"><a class="tile-link" href="#articulo-espirometria-que-es-y-como-prepararte" data-article="articulo-espirometria-que-es-y-como-prepararte">Cómo prepararte para una espirometría <svg class="ico"><use href="#i-arrow"/></svg></a></p>
+      </div>
+      <div class="exam-list reveal reveal-d1">
+        <div class="exam-list-core">
+          <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-lungs"/></svg></span><div><h3>Espirometría basal y post broncodilatador</h3><p>Evalúa tu función pulmonar antes y después de un broncodilatador.</p></div></div>
+          <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-lungs"/></svg></span><div><h3>Espirometría con ejercicio</h3><p>Mide la respuesta de tus pulmones al esfuerzo físico.</p></div></div>
+          <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-walk"/></svg></span><div><h3>Test de marcha</h3><p>Evalúa tu capacidad funcional al caminar.</p></div></div>
+          <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-gauge"/></svg></span><div><h3>Pimometría (PIM-PEM)</h3><p>Mide la fuerza de tus músculos respiratorios.</p></div></div>
+          <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-ecg"/></svg></span><div><h3>Electrocardiograma</h3><p>Registro de la actividad eléctrica del corazón.</p></div></div>
+          <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-bp"/></svg></span><div><h3>Holter de presión arterial</h3><p>Monitoreo de tu presión durante 24 horas, en tu rutina diaria.</p></div></div>
+          <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-moon"/></svg></span><div><h3>Poligrafía</h3><p>Estudio respiratorio durante el sueño.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- UNIDAD DE LA MUJER -->
   <section class="mujer" id="mujer" aria-labelledby="mujer-title">
     <div class="mujer-banner">
@@ -617,7 +729,7 @@ a.ci:hover{border-color:var(--accent)}
           <div class="m-card lead-card reveal">
             <h3><svg class="ico"><use href="#i-heart"/></svg>Kinesiología de piso pélvico</h3>
             <p style="color:var(--text-muted)">Tratamiento y rehabilitación del piso pélvico, guiados por kinesiología, para mujeres en distintas etapas de la vida.</p>
-            <p style="margin-top:12px"><a href="blog/kinesiologia-piso-pelvico-cuando-consultar.html" class="tile-link">Cuándo consultar <svg class="ico"><use href="#i-arrow"/></svg></a></p>
+            <p style="margin-top:12px"><a href="#articulo-kinesiologia-piso-pelvico-cuando-consultar" data-article="articulo-kinesiologia-piso-pelvico-cuando-consultar" class="tile-link">Cuándo consultar <svg class="ico"><use href="#i-arrow"/></svg></a></p>
           </div>
           <div class="m-card reveal reveal-d1">
             <h3>Tratamientos reductivos</h3>
@@ -647,36 +759,8 @@ a.ci:hover{border-color:var(--accent)}
     </div>
   </section>
 
-  <!-- EXÁMENES -->
-  <section class="section section-alt" id="examenes" aria-labelledby="exam-title">
-    <div class="container exam-grid">
-      <div class="reveal">
-        <span class="eyebrow">Laboratorio de función pulmonar</span>
-        <h2 id="exam-title">Exámenes para un diagnóstico preciso</h2>
-        <p class="lead">La espirometría mide cuánto aire tienen tus pulmones y la velocidad con que lo movilizas. Es clave para evaluar tu función pulmonar.</p>
-        <h3 style="margin-top:28px;font-size:1.05rem">¿Qué permite detectar o evaluar?</h3>
-        <div class="detect">
-          <span class="chip">Asma bronquial</span><span class="chip">EPOC en fumadores</span><span class="chip">Causa de dificultad respiratoria</span><span class="chip">Evaluación prequirúrgica</span><span class="chip">Alergias</span><span class="chip">Efecto de un medicamento</span><span class="chip">Avance de un tratamiento</span><span class="chip">Daño por contaminantes</span><span class="chip">Evaluación deportiva</span>
-        </div>
-        <div class="exam-photo"><div class="bezel"><img src="assets/img/espirometria.webp" alt="Paciente realizando una espirometría junto a una profesional" width="1125" height="340" loading="lazy"></div></div>
-        <p style="margin-top:22px"><a class="tile-link" href="blog/espirometria-que-es-y-como-prepararte.html">Cómo prepararte para una espirometría <svg class="ico"><use href="#i-arrow"/></svg></a></p>
-      </div>
-      <div class="exam-list reveal reveal-d1">
-        <div class="exam-list-core">
-          <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-lungs"/></svg></span><div><h3>Espirometría basal y post broncodilatador</h3><p>Evalúa tu función pulmonar antes y después de un broncodilatador.</p></div></div>
-          <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-lungs"/></svg></span><div><h3>Espirometría con ejercicio</h3><p>Mide la respuesta de tus pulmones al esfuerzo físico.</p></div></div>
-          <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-walk"/></svg></span><div><h3>Test de marcha</h3><p>Evalúa tu capacidad funcional al caminar.</p></div></div>
-          <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-gauge"/></svg></span><div><h3>Pimometría (PIM-PEM)</h3><p>Mide la fuerza de tus músculos respiratorios.</p></div></div>
-          <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-ecg"/></svg></span><div><h3>Electrocardiograma</h3><p>Registro de la actividad eléctrica del corazón.</p></div></div>
-          <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-bp"/></svg></span><div><h3>Holter de presión arterial</h3><p>Monitoreo de tu presión durante 24 horas, en tu rutina diaria.</p></div></div>
-          <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-moon"/></svg></span><div><h3>Poligrafía</h3><p>Estudio respiratorio durante el sueño.</p></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- SEDES -->
-  <section class="section" id="sedes" aria-labelledby="sedes-title">
+  <section class="section section-alt" id="sedes" aria-labelledby="sedes-title">
     <div class="container">
       <div class="sedes-head reveal">
         <h2 id="sedes-title">Una red presente de norte a centro</h2>
@@ -706,7 +790,7 @@ a.ci:hover{border-color:var(--accent)}
   </section>
 
   <!-- CÓMO AGENDAR -->
-  <section class="section section-alt" id="agendar" aria-labelledby="agendar-title">
+  <section class="section" id="agendar" aria-labelledby="agendar-title">
     <div class="container">
       <div class="reveal" style="max-width:720px">
         <span class="eyebrow">Reserva en línea</span>
@@ -720,24 +804,6 @@ a.ci:hover{border-color:var(--accent)}
       <div class="steps-foot reveal">
         <a class="btn btn-primary js-booking" href="#" target="_blank" rel="noopener">Agenda tu hora<span class="btn-ico"><svg class="ico"><use href="#i-arrow"/></svg></span></a>
         <p>¿Problemas con tu reserva? Escribe a <a href="mailto:gestionclinica@mediclife.cl">gestionclinica@mediclife.cl</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- EMPRESAS -->
-  <section class="section" id="empresas" aria-labelledby="emp-title">
-    <div class="container">
-      <div class="empresas reveal">
-        <div>
-          <h2 id="emp-title">Gestión y asesoría en salud para empresas e instituciones</h2>
-          <p>Entregamos soluciones integrales de salud con calidad técnica y de servicio, con foco en la administración y gestión en salud pública y privada.</p>
-          <div class="hero-ctas"><a class="btn btn-light" href="#contacto">Escríbenos<span class="btn-ico"><svg class="ico"><use href="#i-arrow"/></svg></span></a></div>
-        </div>
-        <ul>
-          <li><svg class="ico"><use href="#i-building"/></svg>Para empresas e instituciones públicas y privadas</li>
-          <li><svg class="ico"><use href="#i-check"/></svg>Administración y gestión de servicios de salud</li>
-          <li><svg class="ico"><use href="#i-check"/></svg>Respaldo de una red con presencia en siete ciudades</li>
-        </ul>
       </div>
     </div>
   </section>
@@ -764,49 +830,229 @@ a.ci:hover{border-color:var(--accent)}
     </div>
   </section>
 
+  <!-- EMPRESAS -->
+  <section class="section" id="empresas" aria-labelledby="emp-title">
+    <div class="container">
+      <div class="empresas reveal">
+        <div>
+          <h2 id="emp-title">Gestión y asesoría en salud para empresas e instituciones</h2>
+          <p>Entregamos soluciones integrales de salud con calidad técnica y de servicio, con foco en la administración y gestión en salud pública y privada.</p>
+          <div class="hero-ctas"><a class="btn btn-light" href="#contacto">Escríbenos<span class="btn-ico"><svg class="ico"><use href="#i-arrow"/></svg></span></a></div>
+        </div>
+        <ul>
+          <li><svg class="ico"><use href="#i-building"/></svg>Para empresas e instituciones públicas y privadas</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Administración y gestión de servicios de salud</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Respaldo de una red con presencia en siete ciudades</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- BLOG -->
-  <section class="section" id="blog" aria-labelledby="blog-title">
+  <section class="section section-alt" id="blog" aria-labelledby="blog-title">
     <div class="container">
       <div class="reveal" style="max-width:720px">
         <span class="eyebrow">Blog de salud</span>
         <h2 id="blog-title">Información para cuidarte mejor</h2>
         <p class="lead">Guías simples sobre exámenes y tratamientos, para que llegues a tu atención con todo claro.</p>
       </div>
-      <div class="blog-grid">
-        <a class="post reveal" href="blog/espirometria-que-es-y-como-prepararte.html">
-          <div class="tile-img"><img class="img-lift" src="assets/img/espirometria.webp" alt="Paciente realizando una espirometría" width="1125" height="340" loading="lazy"></div>
+      <div class="blog-grid" id="blog-grid">
+        <a class="post reveal" href="#articulo-espirometria-que-es-y-como-prepararte" data-article="articulo-espirometria-que-es-y-como-prepararte" aria-controls="articulo-espirometria-que-es-y-como-prepararte">
+          <div class="tile-img"><img class="img-lift" src="assets/img/espirometria.webp" alt="Paciente realizando una espirometría junto a una profesional de la salud" width="1125" height="340" loading="lazy"></div>
           <div class="post-body">
             <span class="cat">Exámenes</span>
             <h3>Espirometría: qué es, para qué sirve y cómo prepararte</h3>
-            <p>Qué mide el examen, cuánto dura y qué cuidados tener antes de hacértelo.</p>
+            <p>Una guía simple sobre el examen que evalúa cómo funcionan tus pulmones: qué mide, cuándo se pide y qué cuidados tener antes de hacértelo.</p>
             <span class="tile-link">Leer artículo <svg class="ico"><use href="#i-arrow"/></svg></span>
           </div>
         </a>
-        <a class="post reveal reveal-d1" href="blog/kinesiologia-piso-pelvico-cuando-consultar.html">
+        <a class="post reveal reveal-d1" href="#articulo-kinesiologia-piso-pelvico-cuando-consultar" data-article="articulo-kinesiologia-piso-pelvico-cuando-consultar" aria-controls="articulo-kinesiologia-piso-pelvico-cuando-consultar">
           <div class="tile-img"><img class="img-lift" src="assets/img/unidad-mujer.webp" alt="Mujer al aire libre con los brazos abiertos" width="1125" height="340" loading="lazy"></div>
           <div class="post-body">
             <span class="cat">Unidad de la Mujer</span>
             <h3>Kinesiología de piso pélvico: señales para consultar</h3>
-            <p>Escapes de orina, posparto o menopausia: cuándo pedir una evaluación.</p>
+            <p>Escapes de orina, posparto o menopausia: el piso pélvico se puede evaluar y entrenar. Te contamos cuándo pedir una evaluación.</p>
             <span class="tile-link">Leer artículo <svg class="ico"><use href="#i-arrow"/></svg></span>
           </div>
         </a>
-        <a class="post reveal reveal-d2" href="blog/holter-presion-arterial-que-es.html">
-          <div class="tile-img"><img src="assets/img/enfermeria.webp" alt="Equipo de enfermería sonriendo" width="340" height="200" loading="lazy"></div>
+        <a class="post reveal reveal-d2" href="#articulo-holter-presion-arterial-que-es" data-article="articulo-holter-presion-arterial-que-es" aria-controls="articulo-holter-presion-arterial-que-es">
+          <div class="tile-img"><img class="" src="assets/img/enfermeria.webp" alt="Equipo de enfermería sonriendo" width="340" height="200" loading="lazy"></div>
           <div class="post-body">
             <span class="cat">Exámenes</span>
             <h3>Holter de presión arterial: cómo funciona y qué esperar</h3>
-            <p>Por qué se pide, cómo es usar el equipo 24 horas y recomendaciones prácticas.</p>
+            <p>Por qué tu médico puede pedirte un monitoreo de presión de 24 horas, cómo es usar el equipo y qué hacer para obtener un buen resultado.</p>
             <span class="tile-link">Leer artículo <svg class="ico"><use href="#i-arrow"/></svg></span>
           </div>
         </a>
       </div>
-      <div class="blog-more reveal"><a class="btn btn-ghost" href="blog/">Ver todos los artículos</a></div>
+      <article class="reader" id="articulo-espirometria-que-es-y-como-prepararte" hidden aria-labelledby="articulo-espirometria-que-es-y-como-prepararte-t">
+        <div class="reader-shell"><div class="reader-core">
+          <button class="reader-close" type="button" aria-label="Cerrar artículo"><svg class="ico"><use href="#i-plus"/></svg></button>
+          <span class="cat">Exámenes</span>
+          <h3 id="articulo-espirometria-que-es-y-como-prepararte-t" class="reader-title">Espirometría: qué es, para qué sirve y cómo prepararte</h3>
+          <p class="reader-dek">Una guía simple sobre el examen que evalúa cómo funcionan tus pulmones: qué mide, cuándo se pide y qué cuidados tener antes de hacértelo.</p>
+          <p class="reader-meta">MedicLife · <time datetime="2026-10-19">19 de octubre de 2026</time> · Lectura de 6 min</p>
+          <div class="reader-cover"><img class="img-lift" src="assets/img/espirometria.webp" alt="Paciente realizando una espirometría junto a una profesional de la salud" width="1125" height="340" loading="lazy"></div>
+          <nav class="reader-toc" aria-label="Contenido del artículo"><strong>En este artículo</strong><ol><li><a href="#espiro-que-es">Qué es la espirometría</a></li><li><a href="#espiro-para-que">Para qué sirve</a></li><li><a href="#espiro-como-es">Cómo es el examen</a></li><li><a href="#espiro-post-bd">Espirometría post broncodilatador</a></li><li><a href="#espiro-preparacion">Cómo prepararte</a></li><li><a href="#espiro-mediclife">Espirometría en MedicLife</a></li></ol></nav>
+          <div class="prose">
+<h4 id="espiro-que-es">Qué es la espirometría</h4>
+<p>La espirometría es una prueba de función pulmonar. Mide <strong>cuánto aire</strong> pueden contener tus pulmones y <strong>con qué velocidad</strong> eres capaz de sacarlo. Con esos datos, el profesional puede saber si el paso del aire está obstruido o si la capacidad de tus pulmones está disminuida.</p>
+<p>Es un examen rápido, no invasivo y no duele. Solo necesitas soplar con fuerza por una boquilla conectada a un equipo llamado espirómetro.</p>
+
+<h4 id="espiro-para-que">Para qué sirve</h4>
+<p>Tu médico puede pedir una espirometría para estudiar síntomas respiratorios o para controlar una enfermedad que ya conoces. Algunos de sus usos más habituales son:</p>
+<ul>
+<li>Apoyar el diagnóstico de <strong>asma bronquial</strong>.</li>
+<li>Detectar <strong>EPOC</strong> en personas que fuman o fumaron.</li>
+<li>Buscar la causa de una <strong>dificultad para respirar</strong> o tos persistente.</li>
+<li>Realizar una <strong>evaluación prequirúrgica</strong>.</li>
+<li>Evaluar el <strong>efecto de un medicamento</strong> o el avance de un tratamiento.</li>
+<li>Estudiar el impacto de <strong>contaminantes</strong> en los pulmones.</li>
+<li>Como parte de una <strong>evaluación deportiva</strong>.</li>
+</ul>
+
+<h4 id="espiro-como-es">Cómo es el examen</h4>
+<p>Te sentarás cómodamente y te pondrán una pinza suave en la nariz para que todo el aire pase por la boca. Luego seguirás las instrucciones del profesional:</p>
+<ol>
+<li>Respiras tranquilo por la boquilla durante unos segundos.</li>
+<li>Tomas todo el aire que puedas.</li>
+<li>Lo botas lo más fuerte y rápido posible, y sigues soplando hasta vaciar los pulmones.</li>
+</ol>
+<p>La maniobra se repite varias veces para obtener resultados confiables. Es normal sentir un poco de cansancio o mareo pasajero por el esfuerzo. En general, el examen completo toma entre 15 y 30 minutos.</p>
+
+<h4 id="espiro-post-bd">Espirometría post broncodilatador</h4>
+<p>En muchos casos el examen se repite después de inhalar un medicamento <strong>broncodilatador</strong>, que abre los bronquios. Tras esperar unos minutos, vuelves a soplar. Comparar ambos resultados ayuda a saber si la obstrucción mejora con el medicamento, algo muy útil para diferenciar entre condiciones como el asma y la EPOC.</p>
+
+<h4 id="espiro-preparacion">Cómo prepararte</h4>
+<p>Las indicaciones exactas te las entrega tu médico o el centro, pero estas recomendaciones son habituales:</p>
+<ul>
+<li><strong>No fumes</strong> al menos una hora antes del examen.</li>
+<li>Evita <strong>comidas abundantes</strong> en las dos horas previas.</li>
+<li>No hagas <strong>ejercicio intenso</strong> justo antes de la prueba.</li>
+<li>Usa <strong>ropa cómoda</strong> que no te apriete el pecho ni el abdomen.</li>
+<li>Si usas <strong>inhaladores</strong>, pregunta si debes suspenderlos antes. No los dejes por tu cuenta.</li>
+<li>Avisa si tuviste una <strong>cirugía reciente</strong> (de ojos, tórax o abdomen) o un problema cardíaco reciente.</li>
+</ul>
+
+<h4 id="espiro-mediclife">Espirometría en MedicLife</h4>
+<p>El Laboratorio de Función Pulmonar de MedicLife realiza espirometría basal y post broncodilatador, espirometría con ejercicio, test de marcha y pimometría. Según la agenda en línea, la espirometría está disponible en <strong>Antofagasta, Tocopilla y Coquimbo</strong>.</p>
+          </div>
+          <p class="reader-note"><strong>Importante:</strong> este artículo entrega información general y no reemplaza la evaluación de un profesional de la salud. Ante cualquier síntoma o duda, consulta con tu médico.</p>
+          <div class="reader-actions">
+            <a class="btn btn-primary js-booking" href="#" target="_blank" rel="noopener">Agenda tu hora<span class="btn-ico"><svg class="ico"><use href="#i-arrow"/></svg></span></a>
+            <button class="btn btn-ghost reader-back" type="button">Volver a los artículos</button>
+          </div>
+        </div></div>
+      </article>
+      <article class="reader" id="articulo-kinesiologia-piso-pelvico-cuando-consultar" hidden aria-labelledby="articulo-kinesiologia-piso-pelvico-cuando-consultar-t">
+        <div class="reader-shell"><div class="reader-core">
+          <button class="reader-close" type="button" aria-label="Cerrar artículo"><svg class="ico"><use href="#i-plus"/></svg></button>
+          <span class="cat">Unidad de la Mujer</span>
+          <h3 id="articulo-kinesiologia-piso-pelvico-cuando-consultar-t" class="reader-title">Kinesiología de piso pélvico: señales para consultar</h3>
+          <p class="reader-dek">Escapes de orina, posparto o menopausia: el piso pélvico se puede evaluar y entrenar. Te contamos cuándo pedir una evaluación.</p>
+          <p class="reader-meta">MedicLife · <time datetime="2026-10-19">19 de octubre de 2026</time> · Lectura de 5 min</p>
+          <div class="reader-cover"><img class="img-lift" src="assets/img/unidad-mujer.webp" alt="Mujer al aire libre con los brazos abiertos" width="1125" height="340" loading="lazy"></div>
+          <nav class="reader-toc" aria-label="Contenido del artículo"><strong>En este artículo</strong><ol><li><a href="#kinesi-que-es">Qué es el piso pélvico</a></li><li><a href="#kinesi-senales">Señales para consultar</a></li><li><a href="#kinesi-etapas">Etapas en que conviene cuidarlo</a></li><li><a href="#kinesi-tratamiento">Cómo es el tratamiento</a></li><li><a href="#kinesi-mediclife">Unidad de la Mujer de MedicLife</a></li></ol></nav>
+          <div class="prose">
+<h4 id="kinesi-que-es">Qué es el piso pélvico</h4>
+<p>El piso pélvico es un conjunto de músculos y tejidos que cierran la parte baja de la pelvis. Sostienen la <strong>vejiga, el útero y el recto</strong>, y participan en la continencia de orina y deposiciones, en la estabilidad del tronco y en la función sexual.</p>
+<p>Como cualquier músculo, puede debilitarse, tensarse en exceso o perder coordinación. La buena noticia es que también se puede evaluar y entrenar con ayuda de la kinesiología.</p>
+
+<h4 id="kinesi-senales">Señales para consultar</h4>
+<p>Hablar de estos temas a veces da vergüenza, pero son más frecuentes de lo que crees. Conviene pedir una evaluación si notas:</p>
+<ul>
+<li><strong>Escapes de orina</strong> al toser, reír, estornudar, saltar o hacer ejercicio.</li>
+<li><strong>Urgencia</strong> para orinar o necesidad de ir al baño muy seguido.</li>
+<li>Sensación de <strong>peso o bulto</strong> en la zona vaginal.</li>
+<li><strong>Dolor</strong> pélvico o dolor durante las relaciones sexuales.</li>
+<li>Dificultad para controlar gases o deposiciones.</li>
+</ul>
+<p>Estas molestias no son algo que "hay que aguantar" por la edad o por haber tenido hijos. Consultar a tiempo facilita el tratamiento.</p>
+
+<h4 id="kinesi-etapas">Etapas en que conviene cuidarlo</h4>
+<ul>
+<li><strong>Embarazo:</strong> el peso del bebé aumenta la carga sobre la pelvis.</li>
+<li><strong>Posparto:</strong> después de un parto vaginal o una cesárea, es recomendable evaluar la recuperación.</li>
+<li><strong>Menopausia:</strong> los cambios hormonales pueden afectar los tejidos de la zona.</li>
+<li><strong>Deportes de impacto:</strong> correr o saltar aumenta la presión sobre el piso pélvico.</li>
+</ul>
+
+<h4 id="kinesi-tratamiento">Cómo es el tratamiento</h4>
+<p>Todo comienza con una <strong>evaluación kinesiológica</strong>: la profesional conversa contigo sobre tus síntomas y hábitos, y revisa la fuerza y coordinación de la musculatura. Con esa información se arma un plan personalizado, que puede incluir:</p>
+<ul>
+<li>Ejercicios guiados para fortalecer o relajar la musculatura.</li>
+<li>Educación sobre postura, respiración y hábitos de baño.</li>
+<li>Pautas para practicar en casa entre sesiones.</li>
+</ul>
+<p>La cantidad de sesiones depende de cada caso y de tu evolución.</p>
+
+<h4 id="kinesi-mediclife">Unidad de la Mujer de MedicLife</h4>
+<p>La nueva <strong>Unidad de la Mujer</strong> de MedicLife ofrece kinesiología de piso pélvico, junto con tratamientos reductivos, limpieza facial y depilación láser, con atención personalizada y en un ambiente acogedor.</p>
+          </div>
+          <p class="reader-note"><strong>Importante:</strong> este artículo entrega información general y no reemplaza la evaluación de un profesional de la salud. Ante cualquier síntoma o duda, consulta con tu médico.</p>
+          <div class="reader-actions">
+            <a class="btn btn-primary js-booking" href="#" target="_blank" rel="noopener">Agenda tu hora<span class="btn-ico"><svg class="ico"><use href="#i-arrow"/></svg></span></a>
+            <button class="btn btn-ghost reader-back" type="button">Volver a los artículos</button>
+          </div>
+        </div></div>
+      </article>
+      <article class="reader" id="articulo-holter-presion-arterial-que-es" hidden aria-labelledby="articulo-holter-presion-arterial-que-es-t">
+        <div class="reader-shell"><div class="reader-core">
+          <button class="reader-close" type="button" aria-label="Cerrar artículo"><svg class="ico"><use href="#i-plus"/></svg></button>
+          <span class="cat">Exámenes</span>
+          <h3 id="articulo-holter-presion-arterial-que-es-t" class="reader-title">Holter de presión arterial: cómo funciona y qué esperar</h3>
+          <p class="reader-dek">Por qué tu médico puede pedirte un monitoreo de presión de 24 horas, cómo es usar el equipo y qué hacer para obtener un buen resultado.</p>
+          <p class="reader-meta">MedicLife · <time datetime="2026-10-19">19 de octubre de 2026</time> · Lectura de 5 min</p>
+          <div class="reader-cover"><img class="" src="assets/img/enfermeria.webp" alt="Equipo de enfermería sonriendo" width="340" height="200" loading="lazy"></div>
+          <nav class="reader-toc" aria-label="Contenido del artículo"><strong>En este artículo</strong><ol><li><a href="#holter-que-es">Qué es el Holter de presión</a></li><li><a href="#holter-por-que">Por qué se pide</a></li><li><a href="#holter-como-funciona">Cómo funciona el día del examen</a></li><li><a href="#holter-recomendaciones">Recomendaciones prácticas</a></li><li><a href="#holter-mediclife">Holter de presión en MedicLife</a></li></ol></nav>
+          <div class="prose">
+<h4 id="holter-que-es">Qué es el Holter de presión</h4>
+<p>El Holter de presión arterial, también llamado <strong>monitoreo ambulatorio de presión arterial (MAPA)</strong>, es un examen que registra tu presión de forma automática durante <strong>24 horas</strong>, mientras haces tu vida normal.</p>
+<p>Consiste en un manguito, como el de un medidor de presión común, que se instala en tu brazo y se conecta a un pequeño equipo que llevas en el cinturón o en un bolso. El equipo infla el manguito cada cierto tiempo y guarda cada medición.</p>
+
+<h4 id="holter-por-que">Por qué se pide</h4>
+<p>Una sola toma en la consulta muestra un momento puntual. El monitoreo de 24 horas, en cambio, entrega una imagen más completa. Tu médico puede indicarlo para:</p>
+<ul>
+<li>Confirmar o descartar un diagnóstico de <strong>hipertensión arterial</strong>.</li>
+<li>Detectar la <strong>hipertensión de bata blanca</strong>, cuando la presión sube solo en la consulta por nervios.</li>
+<li>Identificar presión alta que no aparece en la consulta pero sí en tu día a día.</li>
+<li>Conocer cómo se comporta tu presión <strong>durante la noche</strong>.</li>
+<li>Evaluar si un <strong>tratamiento</strong> está funcionando bien a lo largo del día.</li>
+</ul>
+
+<h4 id="holter-como-funciona">Cómo funciona el día del examen</h4>
+<ol>
+<li>En la instalación te ponen el manguito y te explican cómo funciona el equipo.</li>
+<li>Durante el día el manguito se infla aproximadamente cada 15 a 30 minutos, y con menos frecuencia durante la noche.</li>
+<li>Haces tus actividades habituales y anotas lo más relevante en un registro: horas de sueño, comidas, ejercicio, medicamentos o síntomas.</li>
+<li>Al día siguiente devuelves el equipo para que los datos sean analizados e informados.</li>
+</ol>
+
+<h4 id="holter-recomendaciones">Recomendaciones prácticas</h4>
+<ul>
+<li>Usa ropa con <strong>manga holgada</strong> para que el manguito quede cómodo.</li>
+<li>Cuando sientas que el manguito se infla, <strong>quédate quieto</strong> con el brazo relajado y estirado, idealmente a la altura del corazón.</li>
+<li><strong>No mojes el equipo:</strong> evita ducharte mientras lo usas.</li>
+<li>Mantén tus <strong>actividades normales</strong>, salvo ejercicio intenso, para que el resultado refleje tu día real.</li>
+<li>Toma tus medicamentos como siempre, salvo que tu médico indique otra cosa.</li>
+<li>Completa el <strong>registro de actividades</strong>: ayuda mucho a interpretar el examen.</li>
+</ul>
+
+<h4 id="holter-mediclife">Holter de presión en MedicLife</h4>
+<p>Según la agenda en línea, MedicLife realiza <strong>Holter de presión arterial y electrocardiograma en Coquimbo</strong>, como parte de sus exámenes de apoyo diagnóstico.</p>
+          </div>
+          <p class="reader-note"><strong>Importante:</strong> este artículo entrega información general y no reemplaza la evaluación de un profesional de la salud. Ante cualquier síntoma o duda, consulta con tu médico.</p>
+          <div class="reader-actions">
+            <a class="btn btn-primary js-booking" href="#" target="_blank" rel="noopener">Agenda tu hora<span class="btn-ico"><svg class="ico"><use href="#i-arrow"/></svg></span></a>
+            <button class="btn btn-ghost reader-back" type="button">Volver a los artículos</button>
+          </div>
+        </div></div>
+      </article>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="section section-alt" id="preguntas" aria-labelledby="faq-title">
+  <section class="section" id="preguntas" aria-labelledby="faq-title">
     <div class="container faq-wrap">
       <div class="reveal">
         <h2 id="faq-title">Preguntas frecuentes</h2>
@@ -824,7 +1070,7 @@ a.ci:hover{border-color:var(--accent)}
   </section>
 
   <!-- CONTACTO -->
-  <section class="section" id="contacto" aria-labelledby="contacto-title">
+  <section class="section section-alt" id="contacto" aria-labelledby="contacto-title">
     <div class="container contact-grid">
       <div class="reveal">
         <h2 id="contacto-title">Hablemos</h2>
@@ -878,6 +1124,7 @@ a.ci:hover{border-color:var(--accent)}
       </div>
     </div>
   </section>
+
 </main>
 
 <footer class="site-footer">
@@ -896,17 +1143,17 @@ a.ci:hover{border-color:var(--accent)}
         <ul>
           <li><a href="#servicios">Consulta médica</a></li>
           <li><a href="#servicios">Kinesiología</a></li>
-          <li><a href="#mujer">Unidad de la Mujer</a></li>
           <li><a href="#examenes">Exámenes</a></li>
+          <li><a href="#mujer">Unidad de la Mujer</a></li>
           <li><a href="#empresas">Empresas</a></li>
         </ul>
       </div>
       <div>
         <h4>MedicLife</h4>
         <ul>
-          <li><a href="#nosotros">Quiénes somos</a></li>
           <li><a href="#sedes">Sedes</a></li>
-          <li><a href="blog/">Blog</a></li>
+          <li><a href="#nosotros">Quiénes somos</a></li>
+          <li><a href="#blog">Blog</a></li>
           <li><a href="#preguntas">Preguntas frecuentes</a></li>
           <li><a href="https://www.mediclife.cl/politica-y-privacidad/" target="_blank" rel="noopener">Política de privacidad</a></li>
         </ul>
@@ -1013,6 +1260,48 @@ a.ci:hover{border-color:var(--accent)}
       btn.setAttribute('aria-expanded', String(open));
     });
   });
+
+  // Blog: artículos dentro de la landing
+  var readers = doc.querySelectorAll('.reader');
+  var postCards = doc.querySelectorAll('.post[data-article]');
+  function openArticle(id, focus){
+    var target = doc.getElementById(id);
+    if (!target) return;
+    readers.forEach(function(r){ r.hidden = r !== target; r.classList.remove('opening'); });
+    postCards.forEach(function(c){ var on = c.getAttribute('data-article') === id; c.classList.toggle('is-active', on); c.setAttribute('aria-expanded', String(on)); });
+    target.hidden = false;
+    void target.offsetWidth; target.classList.add('opening');
+    target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    if (focus) { var t = target.querySelector('.reader-title'); t.setAttribute('tabindex','-1'); t.focus({ preventScroll: true }); }
+    if (history.replaceState) history.replaceState(null, '', '#' + id);
+  }
+  function closeArticle(){
+    var open = Array.prototype.find.call(readers, function(r){ return !r.hidden; });
+    readers.forEach(function(r){ r.hidden = true; });
+    postCards.forEach(function(c){ c.classList.remove('is-active'); c.setAttribute('aria-expanded','false'); });
+    var grid = doc.getElementById('blog-grid');
+    grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (open) { var card = doc.querySelector('.post[data-article="' + open.id + '"]'); if (card) card.focus({ preventScroll: true }); }
+    if (history.replaceState) history.replaceState(null, '', '#blog');
+  }
+  doc.querySelectorAll('a[data-article]').forEach(function(a){
+    a.addEventListener('click', function(e){ e.preventDefault(); openArticle(a.getAttribute('data-article'), true); });
+  });
+  doc.querySelectorAll('.reader-close, .reader-back').forEach(function(b){ b.addEventListener('click', closeArticle); });
+  if (location.hash && location.hash.indexOf('#articulo-') === 0) { openArticle(location.hash.slice(1), false); }
+
+  // Menú: resaltar la sección visible
+  var navLinks = doc.querySelectorAll('.nav-links a[href^="#"]');
+  if ('IntersectionObserver' in window) {
+    var map = {};
+    navLinks.forEach(function(a){ var sec = doc.querySelector(a.getAttribute('href')); if (sec) map[sec.id] = a; });
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting && map[en.target.id]) { navLinks.forEach(function(l){ l.classList.remove('active'); }); map[en.target.id].classList.add('active'); }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(map).forEach(function(id){ spy.observe(doc.getElementById(id)); });
+  }
 
   // Formulario: validación y envío por correo
   var form = doc.getElementById('contact-form');
