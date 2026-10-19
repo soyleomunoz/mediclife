@@ -24,9 +24,8 @@
 <meta name="twitter:image" content="https://www.mediclife.cl/assets/img/og-mediclife.jpg">
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="assets/img/consulta-medica.webp">
 
 <script type="application/ld+json">
@@ -35,6 +34,9 @@
   "@type": "MedicalOrganization",
   "name": "MedicLife",
   "alternateName": "MedicLife Red de Salud",
+  "legalName": "Centro de Atención Médica y Procedimientos Médicos MedicLife SpA",
+  "taxID": "76.744.768-K",
+  "address": {"@type": "PostalAddress", "streetAddress": "Avda. Videla 810, of. 214, Edificio Verne", "addressLocality": "Coquimbo", "addressRegion": "Coquimbo", "addressCountry": "CL"},
   "slogan": "Red de salud más cerca de ti",
   "url": "https://www.mediclife.cl/",
   "logo": "https://www.mediclife.cl/assets/img/logo.webp",
@@ -115,6 +117,12 @@
 </script>
 
 <style>
+/* Plus Jakarta Sans (OFL-1.1), alojada en el sitio */
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/plus-jakarta-sans-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/plus-jakarta-sans-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/plus-jakarta-sans-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/plus-jakarta-sans-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:800;font-display:swap;src:url(assets/fonts/plus-jakarta-sans-latin-800-normal.woff2) format("woff2")}
 :root{
   --primary:#285CA8;
   --primary-hover:#1F4B8C;
@@ -405,6 +413,7 @@ a.ci:hover{border-color:var(--accent)}
 .field input,.field select,.field textarea{width:100%;font:500 1rem/1.4 var(--font);color:var(--text);background:var(--bg-alt);border:1.5px solid var(--border);border-radius:var(--radius-input);padding:13px 14px;transition:border-color .3s var(--ease),background-color .3s var(--ease)}
 .field textarea{min-height:120px;resize:vertical}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--primary);background:#fff;box-shadow:0 0 0 4px rgba(59,142,214,.18)}
+.field .help{font-size:.85rem;color:var(--text-muted);line-height:1.45}
 .field .err{font-size:.85rem;color:#B42318;min-height:0}
 .field.invalid input,.field.invalid select,.field.invalid textarea{border-color:#B42318}
 .form-row{display:grid;grid-template-columns:1fr;gap:0 16px}
@@ -1108,10 +1117,10 @@ a.ci:hover{border-color:var(--accent)}
               <option>Empresas e instituciones</option>
               <option>Otro</option>
             </select><span class="err" aria-live="polite"></span></div>
-          <div class="field"><label for="f-msg">Mensaje</label><textarea id="f-msg" name="mensaje" required></textarea><span class="err" aria-live="polite"></span></div>
+          <div class="field"><label for="f-msg">Mensaje</label><textarea id="f-msg" name="mensaje" required aria-describedby="f-msg-help"></textarea><span class="help" id="f-msg-help">Por tu privacidad, no incluyas información clínica (diagnósticos, exámenes o tratamientos) en este mensaje.</span><span class="err" aria-live="polite"></span></div>
           <button class="btn btn-primary" type="submit">Enviar mensaje<span class="btn-ico"><svg class="ico"><use href="#i-arrow"/></svg></span></button>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-          <p class="form-note">Para agendar una hora, usa la agenda en línea. Revisa nuestra <a href="https://www.mediclife.cl/politica-y-privacidad/" target="_blank" rel="noopener">política de privacidad</a>.</p>
+          <p class="form-note">Para agendar una hora, usa la agenda en línea. Conoce cómo tratamos tus datos en nuestra <a href="#politica-de-privacidad" data-article="politica-de-privacidad">política de privacidad</a>.</p>
         </form>
       </div>
     </div>
@@ -1130,6 +1139,121 @@ a.ci:hover{border-color:var(--accent)}
   </section>
 
 </main>
+
+  <!-- POLÍTICA DE PRIVACIDAD -->
+  <dialog class="reader" id="politica-de-privacidad" aria-labelledby="politica-de-privacidad-t">
+    <button class="reader-close" type="button" aria-label="Cerrar política de privacidad"><svg class="ico"><use href="#i-plus"/></svg></button>
+    <div class="reader-scroll"><article class="reader-core">
+      <span class="cat">Legal</span>
+      <h2 id="politica-de-privacidad-t" class="reader-title">Política de Privacidad y Protección de Datos Personales</h2>
+      <p class="reader-dek">En MedicLife nos comprometemos a proteger la privacidad de las personas que visitan nuestro sitio web y utilizan nuestros canales de contacto. Esta política explica cómo recopilamos, usamos, almacenamos y protegemos tus datos personales, conforme a la Ley N° 19.628 sobre protección de la vida privada y sus modificaciones, incluida la Ley N° 21.719.</p>
+      <p class="reader-meta">Última actualización: <time datetime="2026-10-19">19 de octubre de 2026</time></p>
+      <nav class="reader-toc" aria-label="Contenido de la política" style="margin-top:24px"><strong>Contenido</strong><ol>
+        <li><a href="#pp-responsable">Responsable del tratamiento</a></li>
+        <li><a href="#pp-datos">Datos que podemos recopilar</a></li>
+        <li><a href="#pp-finalidades">Finalidades del tratamiento</a></li>
+        <li><a href="#pp-base">Base legal</a></li>
+        <li><a href="#pp-salud">Datos de salud</a></li>
+        <li><a href="#pp-formulario">Formulario de contacto</a></li>
+        <li><a href="#pp-agenda">Agenda en línea</a></li>
+        <li><a href="#pp-comerciales">Comunicaciones comerciales</a></li>
+        <li><a href="#pp-cookies">Cookies</a></li>
+        <li><a href="#pp-terceros">Proveedores y transferencias</a></li>
+        <li><a href="#pp-conservacion">Conservación</a></li>
+        <li><a href="#pp-seguridad">Seguridad</a></li>
+        <li><a href="#pp-derechos">Tus derechos</a></li>
+        <li><a href="#pp-cambios">Modificaciones</a></li>
+        <li><a href="#pp-contacto">Contacto</a></li>
+      </ol></nav>
+      <div class="prose">
+<h4 id="pp-responsable">1. Responsable del tratamiento</h4>
+<ul>
+<li><strong>Razón social:</strong> Centro de Atención Médica y Procedimientos Médicos MedicLife SpA</li>
+<li><strong>Nombre comercial:</strong> MedicLife</li>
+<li><strong>RUT:</strong> 76.744.768-K</li>
+<li><strong>Domicilio:</strong> Avda. Videla 810, oficina 214, Edificio Verne, Coquimbo</li>
+<li><strong>Correo de contacto:</strong> <a href="mailto:contacto@mediclife.cl">contacto@mediclife.cl</a></li>
+<li><strong>Teléfono:</strong> <a href="tel:+56229029517">(2) 2902 9517</a></li>
+<li><strong>Sitio web:</strong> https://www.mediclife.cl</li>
+</ul>
+
+<h4 id="pp-datos">2. Datos que podemos recopilar</h4>
+<p>Según cómo interactúes con nosotros, podemos tratar:</p>
+<ul>
+<li>Nombre y apellido.</li>
+<li>Correo electrónico.</li>
+<li>Número de teléfono.</li>
+<li>Nombre de la empresa, en el caso de consultas de empresas e instituciones.</li>
+<li>El motivo de tu consulta y la información que incluyas voluntariamente en tu mensaje.</li>
+</ul>
+<p>Este sitio no utiliza cookies de seguimiento ni herramientas de analítica o publicidad. Como ocurre con cualquier sitio web, el servicio de alojamiento registra datos técnicos de la conexión (como la dirección IP, el navegador y la fecha de visita) para entregar el sitio y protegerlo frente a abusos.</p>
+
+<h4 id="pp-finalidades">3. Finalidades del tratamiento</h4>
+<ul>
+<li>Responder las consultas que nos hagas por correo, teléfono o formulario.</li>
+<li>Entregarte información sobre nuestros servicios, sedes y convenios.</li>
+<li>Preparar cotizaciones y coordinar comunicaciones con empresas e instituciones.</li>
+<li>Gestionar la relación contractual cuando contrates nuestros servicios.</li>
+<li>Mantener el funcionamiento y la seguridad del sitio web.</li>
+</ul>
+<p>No usaremos tus datos para finalidades incompatibles con las aquí informadas.</p>
+
+<h4 id="pp-base">4. Base legal del tratamiento</h4>
+<p>Tratamos los datos según la legislación chilena aplicable, sobre la base de tu consentimiento, de las medidas precontractuales que nos solicites, de la ejecución de un contrato, del cumplimiento de obligaciones legales u otra base de licitud que corresponda. Cuando el tratamiento se base en tu consentimiento, puedes retirarlo en cualquier momento escribiendo a <a href="mailto:contacto@mediclife.cl">contacto@mediclife.cl</a>.</p>
+
+<h4 id="pp-salud">5. Datos de salud</h4>
+<p>Los datos relativos a la salud son datos personales sensibles y reciben una protección reforzada. <strong>No solicitamos datos de salud a través de este sitio web.</strong> Te pedimos no incluir diagnósticos, resultados de exámenes ni tratamientos en el formulario o en correos de contacto. Esa información se trata únicamente en el contexto de tu atención, con los resguardos que exige la ley.</p>
+
+<h4 id="pp-formulario">6. Formulario de contacto</h4>
+<p>El formulario de este sitio no almacena información en ningún servidor: al enviarlo, se abre tu aplicación de correo con el mensaje listo para que tú lo envíes a <a href="mailto:contacto@mediclife.cl">contacto@mediclife.cl</a>. Usamos esos datos solo para atender tu solicitud. Te pedimos entregar información veraz y actualizada.</p>
+
+<h4 id="pp-agenda">7. Agenda en línea</h4>
+<p>La reserva de horas se realiza en una plataforma externa de agendamiento (SACMED), donde se solicitan datos como tu RUT o pasaporte, tu previsión y la atención que requieres. Esos datos se usan para gestionar tu hora y se tratan con los resguardos aplicables a la información de salud. Si tienes problemas con una reserva, escribe a <a href="mailto:gestionclinica@mediclife.cl">gestionclinica@mediclife.cl</a>.</p>
+
+<h4 id="pp-comerciales">8. Comunicaciones comerciales</h4>
+<p>Solo te enviaremos comunicaciones comerciales cuando exista una base legal válida. Puedes pedir dejar de recibirlas en cualquier momento, mediante el mecanismo incluido en cada mensaje o escribiéndonos.</p>
+
+<h4 id="pp-cookies">9. Cookies</h4>
+<p>Este sitio no instala cookies propias ni de terceros con fines de analítica o publicidad. Si en el futuro incorporamos herramientas que las usen, actualizaremos esta política y te pediremos tu consentimiento antes de activar cookies no esenciales.</p>
+
+<h4 id="pp-terceros">10. Proveedores y transferencias internacionales</h4>
+<p>Para operar el sitio y prestar nuestros servicios usamos proveedores que tratan datos por cuenta de MedicLife, solo en la medida necesaria:</p>
+<ul>
+<li>Alojamiento del sitio web: GitHub Pages (GitHub, Inc.), con servidores fuera de Chile.</li>
+<li>Correo electrónico corporativo.</li>
+<li>Plataforma de agendamiento en línea (SACMED).</li>
+</ul>
+<p>Cuando los datos se traten o transfieran fuera de Chile, lo haremos conforme a la legislación aplicable y con las garantías correspondientes. Las redes sociales enlazadas (Instagram y Facebook) se rigen por sus propias políticas de privacidad.</p>
+
+<h4 id="pp-conservacion">11. Conservación de los datos</h4>
+<p>Conservamos tus datos el tiempo necesario para cumplir las finalidades informadas, atender tus solicitudes, mantener la relación comercial y cumplir las obligaciones legales. Cuando ya no sean necesarios, los eliminamos o anonimizamos.</p>
+
+<h4 id="pp-seguridad">12. Seguridad y confidencialidad</h4>
+<p>Adoptamos medidas razonables para proteger tus datos frente a accesos no autorizados, pérdida, alteración o uso indebido. El acceso está limitado a las personas y proveedores que lo necesitan para cumplir las finalidades informadas. Ningún sistema de transmisión por internet es completamente seguro, pero trabajamos para reducir los riesgos y, si ocurre una vulneración que te afecte, la informaremos conforme a la ley.</p>
+
+<h4 id="pp-derechos">13. Tus derechos</h4>
+<p>Como titular de tus datos, puedes ejercer los siguientes derechos:</p>
+<ul>
+<li><strong>Acceso:</strong> saber qué datos tuyos tratamos.</li>
+<li><strong>Rectificación:</strong> corregir datos inexactos, desactualizados o incompletos.</li>
+<li><strong>Supresión:</strong> pedir la eliminación de tus datos, cuando proceda.</li>
+<li><strong>Oposición:</strong> oponerte a determinados tratamientos.</li>
+<li><strong>Portabilidad:</strong> recibir tus datos en un formato estructurado, cuando corresponda.</li>
+<li><strong>Bloqueo:</strong> pedir la suspensión temporal del tratamiento, cuando proceda.</li>
+</ul>
+<p>Para ejercerlos, escribe a <a href="mailto:contacto@mediclife.cl">contacto@mediclife.cl</a> indicando el derecho que quieres ejercer y los antecedentes que permitan identificarte. Responderemos dentro de los plazos que establece la ley. Si no quedas conforme con la respuesta, puedes recurrir a la Agencia de Protección de Datos Personales.</p>
+
+<h4 id="pp-cambios">14. Modificaciones</h4>
+<p>Podemos actualizar esta política para reflejar cambios en nuestras prácticas, servicios o en la legislación. La versión vigente estará siempre disponible en este sitio, con su fecha de actualización.</p>
+
+<h4 id="pp-contacto">15. Contacto</h4>
+<p>Si tienes dudas sobre esta política o el uso de tus datos, escríbenos a <a href="mailto:contacto@mediclife.cl">contacto@mediclife.cl</a> o llámanos al <a href="tel:+56229029517">(2) 2902 9517</a>.</p>
+      </div>
+      <div class="reader-actions">
+        <button class="btn btn-ghost reader-back" type="button">Cerrar</button>
+      </div>
+    </article></div>
+  </dialog>
 
 <footer class="site-footer">
   <div class="container">
@@ -1159,7 +1283,7 @@ a.ci:hover{border-color:var(--accent)}
           <li><a href="#nosotros">Quiénes somos</a></li>
           <li><a href="#blog">Blog</a></li>
           <li><a href="#preguntas">Preguntas frecuentes</a></li>
-          <li><a href="https://www.mediclife.cl/politica-y-privacidad/" target="_blank" rel="noopener">Política de privacidad</a></li>
+          <li><a href="#politica-de-privacidad" data-article="politica-de-privacidad">Política de privacidad</a></li>
         </ul>
       </div>
       <div>
@@ -1172,7 +1296,7 @@ a.ci:hover{border-color:var(--accent)}
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span class="js-year"></span> MedicLife. Todos los derechos reservados.</span>
+      <span>© <span class="js-year"></span> MedicLife. Todos los derechos reservados. <a href="#politica-de-privacidad" data-article="politica-de-privacidad">Privacidad</a></span>
       <span>Hecho con 💛 en Santiago, Chile · Desarrollado por <a href="https://gestixpro.cl/" target="_blank" rel="noopener">GestixPro</a></span>
     </div>
   </div>
@@ -1299,7 +1423,7 @@ a.ci:hover{border-color:var(--accent)}
   doc.querySelectorAll('a[data-article]').forEach(function(a){
     a.addEventListener('click', function(e){ e.preventDefault(); openArticle(a.getAttribute('data-article'), a); });
   });
-  if (location.hash && location.hash.indexOf('#articulo-') === 0) { openArticle(location.hash.slice(1), null); }
+  if (location.hash && (location.hash.indexOf('#articulo-') === 0 || location.hash === '#politica-de-privacidad')) { openArticle(location.hash.slice(1), null); }
 
   // Menú: resaltar la sección visible (nada en el inicio)
   var navLinks = doc.querySelectorAll('.nav-links a[href^="#"]');
