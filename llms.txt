@@ -1,0 +1,20 @@
+# MedicLife
+
+> MedicLife es una red de salud ambulatoria en Chile ("Red de salud más cerca de ti"), con convenio Fonasa y agenda en línea. Ofrece consulta médica, kinesiología, nutrición, enfermería, fonoaudiología, toma de muestras, exámenes de función pulmonar y una Unidad de la Mujer. También entrega gestión y asesorías en salud para empresas e instituciones.
+
+- Razón social: Centro de Atención Médica y Procedimientos Médicos MedicLife SpA (RUT 76.744.768-K)
+- Sedes según la agenda en línea: Santiago, San Bernardo, Talagante, San Antonio, Coquimbo, Antofagasta y Tocopilla
+- Teléfono: +56 2 2902 9517 · Correo: contacto@mediclife.cl
+- Agenda en línea: https://beta-sacmed.novacaribe.com/ReservaOnline/11454
+
+## Páginas principales
+
+- [Inicio y servicios](https://www.mediclife.cl/): servicios, exámenes, Unidad de la Mujer, sedes, cómo agendar, preguntas frecuentes y contacto
+- [Política de privacidad](https://www.mediclife.cl/#politica-de-privacidad): tratamiento de datos personales conforme a la Ley 21.719
+
+## Blog de salud
+
+- [Estudio de la función pulmonar: qué exámenes existen y cuándo se piden](https://www.mediclife.cl/blog/estudio-funcion-pulmonar-examenes.html): Espirometría, test de marcha, pimometría y poligrafía: para qué sirve cada uno, en qué casos se indican y cuándo conviene consultar.
+- [Espirometría: qué es, para qué sirve y cómo prepararte](https://www.mediclife.cl/blog/espirometria-que-es-y-como-prepararte.html): Una guía simple sobre el examen que evalúa cómo funcionan tus pulmones: qué mide, cuándo se pide y qué cuidados tener antes de hacértelo.
+- [Kinesiología de piso pélvico: señales para consultar](https://www.mediclife.cl/blog/kinesiologia-piso-pelvico-cuando-consultar.html): Escapes de orina, posparto o menopausia: el piso pélvico se puede evaluar y entrenar. Te contamos cuándo pedir una evaluación.
+- [Holter de presión arterial: cómo funciona y qué esperar](https://www.mediclife.cl/blog/holter-presion-arterial-que-es.html): Por qué tu médico puede pedirte un monitoreo de presión de 24 horas, cómo es usar el equipo y qué hacer para obtener un buen resultado.
