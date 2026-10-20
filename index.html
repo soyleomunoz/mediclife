@@ -299,6 +299,17 @@ body.menu-open{overflow:hidden}
 .exam-item + .exam-item{border-top:1px solid var(--border)}
 .exam-item .ic{width:42px;height:42px;border-radius:12px;background:var(--accent-soft);color:var(--primary);display:grid;place-items:center;flex:none}
 .exam-item h3{font-size:1.04rem}
+.gas-band{margin-top:56px;display:grid;grid-template-columns:1fr;gap:32px;align-items:center;background:#fff;border:1px solid var(--border);border-radius:32px;padding:22px;box-shadow:var(--shadow-sm)}
+.gas-photos{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.gas-photos img{aspect-ratio:3/4;object-fit:cover}
+.gas-text h3{font-size:clamp(1.5rem,2.6vw,2rem);font-weight:800;margin-bottom:12px}
+.gas-text .badge-new{background:var(--accent-soft)}
+.gas-text p{color:var(--text-muted)}
+.gas-text ul{list-style:none;margin:16px 0;padding:0;display:grid;gap:10px}
+.gas-text li{display:flex;gap:10px;color:var(--text-muted);font-size:.97rem;line-height:1.45}
+.gas-text li svg{color:var(--primary);width:18px;height:18px;margin-top:2px}
+.gas-text .gas-gym{font-weight:600;color:var(--secondary)}
+@media (min-width:900px){.gas-band{grid-template-columns:1fr 1.1fr;gap:48px;padding:28px 40px 28px 28px}.gas-b{margin-top:48px}}
 .exam-item p{font-size:.92rem;color:var(--text-muted);margin-top:2px}
 
 /* Sedes */
@@ -555,6 +566,7 @@ a.ci:hover{border-color:var(--accent)}
     <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4.5 17a8 8 0 1115 0"/><path d="M12 13l3.5-3.5"/><circle cx="12" cy="13.5" r="1"/></symbol>
     <symbol id="i-ecg" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="3"/><path d="M6 12.5h3l1.5-3 2.5 6 1.5-3H18"/></symbol>
     <symbol id="i-bp" viewBox="0 0 24 24"><rect x="3" y="7" width="11" height="10" rx="2.5"/><path d="M14 12h3a3 3 0 013 3v2"/><circle cx="8.5" cy="12" r="2.2"/><path d="M8.5 12l1.2-1"/></symbol>
+    <symbol id="i-run" viewBox="0 0 24 24"><circle cx="14.5" cy="4.5" r="1.8"/><path d="M6 20l3.5-4.5 3 1.5 1.5-5M9.5 10.5l3-2.5 3 2 2.5 1M12.5 8l-2 4.5"/><path d="M3 13h3M4 16h2"/></symbol>
     <symbol id="i-moon" viewBox="0 0 24 24"><path d="M19.5 14.5A7.5 7.5 0 019.5 4.5a7.5 7.5 0 1010 10z"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
     <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
@@ -724,11 +736,32 @@ a.ci:hover{border-color:var(--accent)}
         <div class="exam-list-core">
           <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-lungs"/></svg></span><div><h3>Espirometría basal y post broncodilatador</h3><p>Evalúa tu función pulmonar antes y después de un broncodilatador.</p></div></div>
           <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-lungs"/></svg></span><div><h3>Espirometría con ejercicio</h3><p>Mide la respuesta de tus pulmones al esfuerzo físico.</p></div></div>
+          <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-run"/></svg></span><div><h3>Análisis de gases espirados</h3><p>Mide el oxígeno que consumes y el CO₂ que eliminas durante el ejercicio. También lo realizamos en gimnasios.</p></div></div>
           <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-walk"/></svg></span><div><h3>Test de marcha</h3><p>Evalúa tu capacidad funcional al caminar.</p></div></div>
           <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-gauge"/></svg></span><div><h3>Pimometría (PIM-PEM)</h3><p>Mide la fuerza de tus músculos respiratorios.</p></div></div>
           <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-ecg"/></svg></span><div><h3>Electrocardiograma</h3><p>Registro de la actividad eléctrica del corazón.</p></div></div>
           <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-bp"/></svg></span><div><h3>Holter de presión arterial</h3><p>Monitoreo de tu presión durante 24 horas, en tu rutina diaria.</p></div></div>
           <div class="exam-item"><span class="ic"><svg class="ico"><use href="#i-moon"/></svg></span><div><h3>Poligrafía</h3><p>Estudio respiratorio durante el sueño.</p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="gas-band reveal">
+        <div class="gas-photos">
+          <div class="bezel gas-a"><img src="assets/img/gases-espirados.webp" alt="Paciente con mascarilla de análisis de gases caminando en trotadora mientras el equipo la monitorea" width="890" height="1200" loading="lazy"></div>
+          <div class="bezel gas-b"><img src="assets/img/gases-espirados-2.webp" alt="Paciente preparada en la trotadora con el equipo portátil de análisis de gases" width="898" height="1200" loading="lazy"></div>
+        </div>
+        <div class="gas-text">
+          <span class="badge-new"><svg class="ico" style="width:16px;height:16px"><use href="#i-run"/></svg>También en gimnasios</span>
+          <h3 id="gases-title">Análisis de gases espirados</h3>
+          <p>Mientras caminas o corres en una trotadora con una mascarilla, un equipo mide el oxígeno que consumes y el dióxido de carbono que eliminas en cada respiración. Así se evalúa tu capacidad aeróbica y cómo responden tus pulmones y tu corazón al esfuerzo.</p>
+          <ul>
+            <li><svg class="ico"><use href="#i-check"/></svg>Deportistas que quieren conocer su rendimiento y planificar su entrenamiento.</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Personas con falta de aire o cansancio al hacer ejercicio.</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Seguimiento de programas de rehabilitación y actividad física.</li>
+          </ul>
+          <p class="gas-gym">También lo realizamos en gimnasios. Si tienes un gimnasio o centro deportivo, escríbenos para coordinarlo.</p>
+          <div class="hero-ctas" style="margin-top:20px"><a class="btn btn-primary" href="#contacto">Escríbenos<span class="btn-ico"><svg class="ico"><use href="#i-arrow"/></svg></span></a><a class="btn btn-ghost js-phone" href="#">Llamar</a></div>
         </div>
       </div>
     </div>
@@ -924,7 +957,7 @@ a.ci:hover{border-color:var(--accent)}
           <p class="reader-dek">Espirometría, test de marcha, pimometría y poligrafía: para qué sirve cada uno, en qué casos se indican y cuándo conviene consultar.</p>
           <p class="reader-meta">MedicLife · <time datetime="2026-10-20">20 de octubre de 2026</time> · Lectura de 6 min</p>
           <div class="reader-cover"><img class="" src="assets/img/consulta-medica.webp" alt="Médica revisando antecedentes de una paciente" width="340" height="200" loading="lazy"></div>
-          <nav class="reader-toc" aria-label="Contenido del artículo"><strong>En este artículo</strong><ol><li><a href="#pulmon-por-que">Por qué estudiar la función pulmonar</a></li><li><a href="#pulmon-espirometria">Espirometría basal y post broncodilatador</a></li><li><a href="#pulmon-ejercicio">Espirometría con ejercicio</a></li><li><a href="#pulmon-marcha">Test de marcha</a></li><li><a href="#pulmon-pim">Pimometría (PIM-PEM)</a></li><li><a href="#pulmon-poligrafia">Poligrafía respiratoria</a></li><li><a href="#pulmon-cuando">Cuándo consultar</a></li><li><a href="#pulmon-mediclife">Función pulmonar en MedicLife</a></li><li><a href="#pulmon-lectura">Lectura complementaria</a></li></ol></nav>
+          <nav class="reader-toc" aria-label="Contenido del artículo"><strong>En este artículo</strong><ol><li><a href="#pulmon-por-que">Por qué estudiar la función pulmonar</a></li><li><a href="#pulmon-espirometria">Espirometría basal y post broncodilatador</a></li><li><a href="#pulmon-ejercicio">Espirometría con ejercicio</a></li><li><a href="#pulmon-gases">Análisis de gases espirados</a></li><li><a href="#pulmon-marcha">Test de marcha</a></li><li><a href="#pulmon-pim">Pimometría (PIM-PEM)</a></li><li><a href="#pulmon-poligrafia">Poligrafía respiratoria</a></li><li><a href="#pulmon-cuando">Cuándo consultar</a></li><li><a href="#pulmon-mediclife">Función pulmonar en MedicLife</a></li><li><a href="#pulmon-lectura">Lectura complementaria</a></li></ol></nav>
           <div class="prose">
 <h4 id="pulmon-por-que">Por qué estudiar la función pulmonar</h4>
 <p>Toser seguido, ahogarse al subir una escalera o roncar con pausas al dormir son molestias que mucha gente normaliza. Sin embargo, pueden ser señales de que los pulmones o la respiración no están funcionando como deberían. Los exámenes de función pulmonar permiten <strong>medir</strong> lo que pasa, apoyar el diagnóstico y controlar la evolución de un tratamiento.</p>
@@ -936,6 +969,10 @@ a.ci:hover{border-color:var(--accent)}
 
 <h4 id="pulmon-ejercicio">Espirometría con ejercicio</h4>
 <p>Algunas personas solo tienen síntomas al hacer actividad física: tos, pecho apretado o falta de aire durante o después del ejercicio. En esta prueba se mide la función pulmonar <strong>antes y después de un esfuerzo físico</strong>, lo que ayuda a detectar si los bronquios se cierran con el ejercicio.</p>
+
+<h4 id="pulmon-gases">Análisis de gases espirados</h4>
+<p>También llamado prueba de esfuerzo cardiopulmonar, se realiza mientras caminas o corres en una trotadora con una mascarilla conectada a un equipo que mide, respiración a respiración, el <strong>oxígeno que consumes</strong> y el <strong>dióxido de carbono que eliminas</strong>. Permite evaluar la capacidad aeróbica y cómo responden en conjunto los pulmones, el corazón y los músculos al esfuerzo.</p>
+<p>Lo usan deportistas que quieren conocer su rendimiento y planificar su entrenamiento, y también personas con falta de aire o cansancio al hacer ejercicio. En MedicLife también lo realizamos en gimnasios.</p>
 
 <h4 id="pulmon-marcha">Test de marcha</h4>
 <p>Evalúa tu <strong>capacidad funcional</strong>: caminas a tu ritmo durante un tiempo determinado, normalmente seis minutos, mientras se registran la distancia recorrida, la oxigenación de la sangre y la frecuencia cardíaca. Es útil para conocer cómo responde tu cuerpo al esfuerzo en enfermedades respiratorias o cardíacas crónicas, y para evaluar avances en rehabilitación.</p>
@@ -959,7 +996,7 @@ a.ci:hover{border-color:var(--accent)}
 <p>El profesional definirá qué examen corresponde según tus síntomas y antecedentes.</p>
 
 <h4 id="pulmon-mediclife">Función pulmonar en MedicLife</h4>
-<p>El Laboratorio de Función Pulmonar de MedicLife realiza espirometría basal y post broncodilatador, espirometría con ejercicio, test de marcha y pimometría, además de poligrafía. Según la agenda en línea, la espirometría está disponible en <strong>Antofagasta, Tocopilla y Coquimbo</strong>. Para conocer la disponibilidad de los demás exámenes en tu ciudad, llámanos al <a href="tel:+56229029517">(2) 2902 9517</a>.</p>
+<p>El Laboratorio de Función Pulmonar de MedicLife realiza espirometría basal y post broncodilatador, espirometría con ejercicio, análisis de gases espirados, test de marcha y pimometría, además de poligrafía. Según la agenda en línea, la espirometría está disponible en <strong>Antofagasta, Tocopilla y Coquimbo</strong>. Para conocer la disponibilidad de los demás exámenes en tu ciudad, llámanos al <a href="tel:+56229029517">(2) 2902 9517</a>.</p>
 
 <h4 id="pulmon-lectura">Lectura complementaria</h4>
 <p>Si quieres profundizar en el tema, la revista de Bupa publicó un reportaje sobre laboratorios de función respiratoria y los exámenes que se usan para estudiar el asma, la EPOC, las alergias y la apnea del sueño.</p>
