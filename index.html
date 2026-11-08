@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MedicLife | Red de salud con Fonasa, kinesiología y exámenes en Chile</title>
 <meta name="description" content="MedicLife, red de salud más cerca de ti. Consulta médica, kinesiología, función pulmonar básica y avanzada, estudios del sueño, salud ocupacional y Unidad de la Mujer. Convenio Fonasa y agenda en línea.">
-<meta name="keywords" content="MedicLife, red de salud, centro médico, kinesiología, espirometría, piso pélvico, Fonasa, Holter de presión arterial, función pulmonar, DLCO, pletismografía, FENO, polisomnografía, poligrafía, medicina del sueño, salud ocupacional, Coquimbo, Santiago, Antofagasta">
+<meta name="keywords" content="MedicLife, red de salud, centro médico, kinesiología, espirometría, piso pélvico, Fonasa, Holter de presión arterial, quiropraxia, kinesiología Fonasa, función pulmonar, DLCO, pletismografía, FENO, polisomnografía, poligrafía, medicina del sueño, salud ocupacional, Coquimbo, Santiago, Antofagasta">
 <link rel="canonical" href="https://www.mediclife.cl/">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#285CA8">
@@ -62,7 +62,7 @@
     {"@type": "Question", "name": "¿Cómo agendo una hora?", "acceptedAnswer": {"@type": "Answer", "text": "En la agenda en línea eliges el tipo de servicio y la sede, la especialidad y, si quieres, el profesional. Luego ingresas tu RUT o pasaporte y tu previsión."}},
     {"@type": "Question", "name": "¿Cómo confirmo o anulo mi hora?", "acceptedAnswer": {"@type": "Answer", "text": "Desde la misma agenda en línea, en la opción para confirmar o anular citas. Si tienes problemas con tu reserva, escribe a gestionclinica@mediclife.cl."}},
     {"@type": "Question", "name": "¿En qué ciudades atiende MedicLife?", "acceptedAnswer": {"@type": "Answer", "text": "La agenda en línea tiene sedes en Santiago, San Bernardo, Talagante, San Antonio, Coquimbo, Antofagasta y Tocopilla. Los servicios disponibles varían según la sede."}},
-    {"@type": "Question", "name": "¿Qué es la pre-evaluación kinesiológica?", "acceptedAnswer": {"@type": "Answer", "text": "Es una primera evaluación con un kinesiólogo para orientar tu tratamiento. En Coquimbo la agenda en línea la ofrece sin costo, y en Santiago también puedes reservarla."}},
+    {"@type": "Question", "name": "¿Qué es la pre-evaluación kinesiológica?", "acceptedAnswer": {"@type": "Answer", "text": "Es una primera evaluación con un kinesiólogo para orientar tu tratamiento. En nuestra clínica de kinesiología de Coquimbo es gratuita, y luego puedes atenderte con valor Fonasa de $7.700. En Santiago también puedes reservarla en la agenda en línea."}},
     {"@type": "Question", "name": "¿Cuánto demoran los informes de función pulmonar y sueño?", "acceptedAnswer": {"@type": "Answer", "text": "Los informes se entregan en menos de 72 horas después de la atención, o en 24 horas en casos urgentes. Los informan médicos broncopulmonares y neurólogos de medicina del sueño, ambos de adultos."}},
     {"@type": "Question", "name": "¿MedicLife ofrece servicios para empresas?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. MedicLife realiza exámenes para salud ocupacional (evaluación pre-empleo, vigilancia periódica, aptitud laboral y detección de enfermedades profesionales) y entrega gestión y asesorías en salud para empresas e instituciones públicas y privadas."}}
   ]
@@ -301,6 +301,8 @@ body.menu-open{overflow:hidden}
 .exam-group .exam-item:first-of-type{padding-top:12px}
 .exam-item .ic{width:42px;height:42px;border-radius:12px;background:var(--accent-soft);color:var(--primary);display:grid;place-items:center;flex:none}
 .exam-item h3{font-size:1.04rem}
+.city-addr{margin-top:6px;font-size:.88rem;font-weight:600;color:var(--secondary)}
+.city-addr a{color:var(--primary)}
 .exam-group + .exam-group{border-top:1px solid var(--border);margin-top:4px;padding-top:14px}
 .exam-group-t{font-size:.78rem!important;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--primary);margin:10px 0 0}
 .report-band{margin-top:56px;display:grid;grid-template-columns:1fr;gap:16px}
@@ -677,8 +679,8 @@ a.ci:hover{border-color:var(--accent)}
         <article class="tile b-consulta reveal">
           <div class="tile-core">
             <div class="tile-img"><img src="assets/img/consulta-medica.webp" alt="Médica atendiendo a una paciente en consulta" width="340" height="200" loading="lazy"></div>
-            <h3>Consulta médica</h3>
-            <p>Medicina general para todo el ciclo de vida: promoción, prevención, recuperación y rehabilitación, considerando a tu familia.</p>
+            <h3>Consultas médicas</h3>
+            <p>Consultas médicas de apoyo en nuestra red de salud, para complementar tu atención.</p>
             <a class="tile-link js-booking" href="#" target="_blank" rel="noopener">Agenda tu hora <svg class="ico"><use href="#i-arrow"/></svg></a>
           </div>
         </article>
@@ -689,9 +691,9 @@ a.ci:hover{border-color:var(--accent)}
             <h3>Kinesiología</h3>
             <p>Evaluación y tratamiento centrados en tu movimiento, para recuperar funcionalidad y calidad de vida en cualquier etapa.</p>
             <div class="chips">
-              <span class="chip">Musculoesquelética</span><span class="chip">Deportiva</span><span class="chip">Neurológica</span><span class="chip">Geriátrica</span><span class="chip">Dermatofuncional</span><span class="chip">Masoterapia</span><span class="chip">Programa Vida Activa</span>
+              <span class="chip">Musculoesquelética</span><span class="chip">Deportiva</span><span class="chip">Neurológica</span><span class="chip">Geriátrica</span><span class="chip">Piso pélvico</span><span class="chip">Dermatofuncional</span><span class="chip">Masoterapia</span><span class="chip">Quiropraxia</span>
             </div>
-            <p>Comienza con una pre-evaluación kinesiológica: sin costo en Coquimbo.</p>
+            <p>Comienza con una <strong>pre-evaluación gratuita</strong> y atiéndete con <strong>valor Fonasa: $7.700</strong> en nuestra clínica de kinesiología de Coquimbo.</p>
             <a class="tile-link js-booking" href="#" target="_blank" rel="noopener">Agenda tu hora <svg class="ico"><use href="#i-arrow"/></svg></a>
           </div>
         </article>
@@ -849,13 +851,13 @@ a.ci:hover{border-color:var(--accent)}
           <div class="city-list">
             <div class="city"><span class="pin"><svg class="ico"><use href="#i-pin"/></svg></span><div><h4>Antofagasta</h4><p>Espirometría basal y post broncodilatador</p></div></div>
             <div class="city"><span class="pin"><svg class="ico"><use href="#i-pin"/></svg></span><div><h4>Tocopilla</h4><p>Espirometría basal y post broncodilatador</p></div></div>
-            <div class="city"><span class="pin"><svg class="ico"><use href="#i-pin"/></svg></span><div><h4>Coquimbo</h4><p>Medicina general, kinesiología, pre-evaluación kinesiológica sin costo, electrocardiograma, espirometría y Holter de presión arterial</p></div></div>
+            <div class="city"><span class="pin"><svg class="ico"><use href="#i-pin"/></svg></span><div><h4>Coquimbo</h4><p>Clínica de kinesiología con valor Fonasa y pre-evaluación gratuita, consultas médicas, electrocardiograma, espirometría y Holter de presión arterial</p><p class="city-addr">Av. Videla 810, oficina 214 · <a href="tel:+56922485348">+56 9 2248 5348</a></p></div></div>
           </div>
         </div>
         <div class="zone zone-centro reveal reveal-d1">
           <h3>Zona centro</h3>
           <div class="city-list">
-            <div class="city"><span class="pin"><svg class="ico"><use href="#i-pin"/></svg></span><div><h4>Santiago</h4><p>Medicina general, kinesiología y pre-evaluación kinesiológica</p></div></div>
+            <div class="city"><span class="pin"><svg class="ico"><use href="#i-pin"/></svg></span><div><h4>Santiago</h4><p>Consultas médicas, kinesiología y pre-evaluación kinesiológica</p></div></div>
             <div class="city"><span class="pin"><svg class="ico"><use href="#i-pin"/></svg></span><div><h4>San Bernardo</h4><p>Consulta presencial</p></div></div>
             <div class="city"><span class="pin"><svg class="ico"><use href="#i-pin"/></svg></span><div><h4>Talagante</h4><p>Kinesiología</p></div></div>
             <div class="city"><span class="pin"><svg class="ico"><use href="#i-pin"/></svg></span><div><h4>San Antonio</h4><p>Consulta presencial</p></div></div>
@@ -1218,7 +1220,7 @@ a.ci:hover{border-color:var(--accent)}
         <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">¿Cómo agendo una hora?<span class="pm"><svg class="ico"><use href="#i-plus"/></svg></span></button><div class="faq-a" role="region"><div><p>En la agenda en línea eliges el tipo de servicio y la sede, la especialidad y, si quieres, el profesional. Luego ingresas tu RUT o pasaporte y tu previsión.</p></div></div></div>
         <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">¿Cómo confirmo o anulo mi hora?<span class="pm"><svg class="ico"><use href="#i-plus"/></svg></span></button><div class="faq-a" role="region"><div><p>Desde la misma agenda en línea, en la opción para confirmar o anular citas. Si tienes problemas con tu reserva, escribe a gestionclinica@mediclife.cl.</p></div></div></div>
         <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">¿En qué ciudades atienden?<span class="pm"><svg class="ico"><use href="#i-plus"/></svg></span></button><div class="faq-a" role="region"><div><p>Santiago, San Bernardo, Talagante, San Antonio, Coquimbo, Antofagasta y Tocopilla. Los servicios varían según la sede; revisa la sección Sedes.</p></div></div></div>
-        <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">¿Qué es la pre-evaluación kinesiológica?<span class="pm"><svg class="ico"><use href="#i-plus"/></svg></span></button><div class="faq-a" role="region"><div><p>Es una primera evaluación con un kinesiólogo para orientar tu tratamiento. En Coquimbo es sin costo, y en Santiago también puedes reservarla.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">¿Qué es la pre-evaluación kinesiológica?<span class="pm"><svg class="ico"><use href="#i-plus"/></svg></span></button><div class="faq-a" role="region"><div><p>Es una primera evaluación con un kinesiólogo para orientar tu tratamiento. En nuestra clínica de kinesiología de Coquimbo es gratuita, y luego puedes atenderte con valor Fonasa de $7.700. En Santiago también puedes reservarla en la agenda en línea.</p></div></div></div>
         <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">¿Cuánto demoran los informes de función pulmonar y sueño?<span class="pm"><svg class="ico"><use href="#i-plus"/></svg></span></button><div class="faq-a" role="region"><div><p>Los informes se entregan en menos de 72 horas después de la atención, o en 24 horas en casos urgentes. Los informan médicos broncopulmonares y neurólogos de medicina del sueño, ambos de adultos.</p></div></div></div>
         <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">¿Tienen servicios para empresas?<span class="pm"><svg class="ico"><use href="#i-plus"/></svg></span></button><div class="faq-a" role="region"><div><p>Sí. Realizamos exámenes para salud ocupacional (evaluación pre-empleo, vigilancia periódica, aptitud laboral y detección de enfermedades profesionales) y entregamos gestión y asesorías en salud para empresas e instituciones públicas y privadas. Escríbenos desde el formulario de contacto.</p></div></div></div>
       </div>
