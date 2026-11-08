@@ -1,6 +1,6 @@
 # MedicLife
 
-> MedicLife es una red de salud ambulatoria en Chile ("Red de salud más cerca de ti"), con convenio Fonasa y agenda en línea. Ofrece consulta médica, kinesiología, nutrición, enfermería, fonoaudiología, toma de muestras, exámenes de función pulmonar (incluido el análisis de gases espirados, que también realiza en gimnasios) y una Unidad de la Mujer. También entrega gestión y asesorías en salud para empresas e instituciones.
+> MedicLife es una red de salud ambulatoria en Chile ("Red de salud más cerca de ti"), con convenio Fonasa y agenda en línea. Ofrece consulta médica, kinesiología, nutrición, enfermería, fonoaudiología y una Unidad de la Mujer. Su laboratorio realiza función pulmonar básica (espirometría y análisis de gases espirados, que también hace en gimnasios), función pulmonar avanzada (DLCO, pletismografía, FENO, PIM y PEM, test de marcha de 6 minutos) y estudios del sueño (poligrafía respiratoria y polisomnografía), con informes en menos de 72 horas emitidos por broncopulmonares y neurólogos de medicina del sueño. Para empresas e instituciones ofrece salud ocupacional (evaluación pre-empleo, vigilancia médica periódica, aptitud laboral y detección de enfermedades profesionales) y gestión en salud.
 
 - Razón social: Centro de Atención Médica y Procedimientos Médicos MedicLife SpA (RUT 76.744.768-K)
 - Sedes según la agenda en línea: Santiago, San Bernardo, Talagante, San Antonio, Coquimbo, Antofagasta y Tocopilla
