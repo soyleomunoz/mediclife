@@ -23,6 +23,10 @@
 <style>@font-face{font-family:"Plus Jakarta Sans";font-weight:400;font-display:swap;src:url(../assets/fonts/plus-jakarta-sans-latin-400-normal.woff2) format("woff2")}@font-face{font-family:"Plus Jakarta Sans";font-weight:600;font-display:swap;src:url(../assets/fonts/plus-jakarta-sans-latin-600-normal.woff2) format("woff2")}@font-face{font-family:"Plus Jakarta Sans";font-weight:700;font-display:swap;src:url(../assets/fonts/plus-jakarta-sans-latin-700-normal.woff2) format("woff2")}@font-face{font-family:"Plus Jakarta Sans";font-weight:800;font-display:swap;src:url(../assets/fonts/plus-jakarta-sans-latin-800-normal.woff2) format("woff2")}
 :root{--p:#285CA8;--ph:#1F4B8C;--s:#12305E;--soft:#E8F1FB;--bg2:#F4F8FC;--t:#0F2440;--m:#4A5D78;--b:#DCE6F2}
 *{box-sizing:border-box}body{margin:0;font-family:"Plus Jakarta Sans",system-ui,sans-serif;font-size:17px;line-height:1.72;color:var(--t);background:#fff;-webkit-font-smoothing:antialiased}
+/* Móvil: sin desplazamiento horizontal de la página (red de seguridad) */
+html,body{overflow-x:hidden;overscroll-behavior-x:none}
+html{touch-action:pan-y pinch-zoom}
+body{position:relative;width:100%}
 img{max-width:100%;height:auto;display:block}a{color:var(--p)}:focus-visible{outline:3px solid #3B8ED6;outline-offset:3px;border-radius:6px}
 .skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:8px;background:var(--s);color:#fff;padding:10px 14px;border-radius:10px;z-index:9}
 header{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--b)}

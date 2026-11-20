@@ -150,6 +150,10 @@
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+/* Móvil: sin desplazamiento horizontal de la página (red de seguridad) */
+html,body{overflow-x:hidden;overscroll-behavior-x:none}
+html{touch-action:pan-y pinch-zoom}
+body{position:relative;width:100%}
 body{margin:0;font-family:var(--font);font-size:17px;line-height:1.65;color:var(--text);background:var(--bg);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
 a{color:var(--primary)}
